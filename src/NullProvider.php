@@ -13,22 +13,15 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider;
 
-final class Example
+final class NullProvider extends AbstractProvider
 {
-    private $name;
-
-    private function __construct(string $name)
+    /**
+     * @return \Generator<string, array{0: null}>
+     */
+    public static function null(): \Generator
     {
-        $this->name = $name;
-    }
-
-    public static function fromName(string $name): self
-    {
-        return new self($name);
-    }
-
-    public function name(): string
-    {
-        return $this->name;
+        yield from self::provideDataForValues([
+            'null' => null,
+        ]);
     }
 }

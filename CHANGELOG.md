@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`1902cc2...main`][1902cc2...main].
+For a full diff see [`a5f2657...main`][a5f2657...main].
 
-[1902cc2...main]: https://github.com/ergebnis/data-provider/compare/1902cc2...main
+### Added
+
+* Imported data providers from [`ergebnis/test-util`](https://github.com/ergebnis/test-util) ([#1]), by [@localheinz]
+
+[a5f2657...main]: https://github.com/ergebnis/data-provider/compare/a5f2657...main
+
+[#1]: https://github.com/ergebnis/data-provider/pull/1
+
+[@localheinz]: https://github.com/localheinz

@@ -1,2 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.13.1@5cf660f63b548ccd4a56f62d916ee4d6028e01a3"/>
+<files psalm-version="4.13.1@5cf660f63b548ccd4a56f62d916ee4d6028e01a3">
+  <file src="src/AbstractProvider.php">
+    <MixedAssignment occurrences="1">
+      <code>$value</code>
+    </MixedAssignment>
+  </file>
+  <file src="src/BoolProvider.php">
+    <MoreSpecificReturnType occurrences="3">
+      <code>\Generator&lt;string, array{0: bool}&gt;</code>
+      <code>\Generator&lt;string, array{0: bool}&gt;</code>
+      <code>\Generator&lt;string, array{0: bool}&gt;</code>
+    </MoreSpecificReturnType>
+  </file>
+  <file src="src/FloatProvider.php">
+    <MoreSpecificReturnType occurrences="7">
+      <code>\Generator&lt;string, array{0: float}&gt;</code>
+      <code>\Generator&lt;string, array{0: float}&gt;</code>
+      <code>\Generator&lt;string, array{0: float}&gt;</code>
+      <code>\Generator&lt;string, array{0: float}&gt;</code>
+      <code>\Generator&lt;string, array{0: float}&gt;</code>
+      <code>\Generator&lt;string, array{0: float}&gt;</code>
+      <code>\Generator&lt;string, array{0: float}&gt;</code>
+    </MoreSpecificReturnType>
+  </file>
+  <file src="src/IntProvider.php">
+    <MoreSpecificReturnType occurrences="7">
+      <code>\Generator&lt;string, array{0: int}&gt;</code>
+      <code>\Generator&lt;string, array{0: int}&gt;</code>
+      <code>\Generator&lt;string, array{0: int}&gt;</code>
+      <code>\Generator&lt;string, array{0: int}&gt;</code>
+      <code>\Generator&lt;string, array{0: int}&gt;</code>
+      <code>\Generator&lt;string, array{0: int}&gt;</code>
+      <code>\Generator&lt;string, array{0: int}&gt;</code>
+    </MoreSpecificReturnType>
+  </file>
+  <file src="src/NullProvider.php">
+    <MoreSpecificReturnType occurrences="1">
+      <code>\Generator&lt;string, array{0: null}&gt;</code>
+    </MoreSpecificReturnType>
+  </file>
+  <file src="src/ObjectProvider.php">
+    <MoreSpecificReturnType occurrences="1">
+      <code>\Generator&lt;string, array{0: bool}&gt;</code>
+    </MoreSpecificReturnType>
+  </file>
+  <file src="src/ResourceProvider.php">
+    <MoreSpecificReturnType occurrences="1">
+      <code>\Generator&lt;string, array{0: resource}&gt;</code>
+    </MoreSpecificReturnType>
+  </file>
+  <file src="src/StringProvider.php">
+    <MoreSpecificReturnType occurrences="6">
+      <code>\Generator&lt;string, array{0: string}&gt;</code>
+      <code>\Generator&lt;string, array{0: string}&gt;</code>
+      <code>\Generator&lt;string, array{0: string}&gt;</code>
+      <code>\Generator&lt;string, array{0: string}&gt;</code>
+      <code>\Generator&lt;string, array{0: string}&gt;</code>
+      <code>\Generator&lt;string, array{0: string}&gt;</code>
+    </MoreSpecificReturnType>
+  </file>
+  <file src="test/Unit/AbstractProviderTestCase.php">
+    <MixedAssignment occurrences="1">
+      <code>$value</code>
+    </MixedAssignment>
+    <RedundantConditionGivenDocblockType occurrences="1">
+      <code>assertIsArray</code>
+    </RedundantConditionGivenDocblockType>
+  </file>
+  <file src="test/Unit/ResourceProviderTest.php">
+    <MissingClosureParamType occurrences="1">
+      <code>$value</code>
+    </MissingClosureParamType>
+  </file>
+  <file src="test/Util/Specification/Closure.php">
+    <MissingClosureParamType occurrences="1">
+      <code>$value</code>
+    </MissingClosureParamType>
+  </file>
+</files>

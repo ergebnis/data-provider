@@ -24,7 +24,7 @@
     "ergebnis/php-cs-fixer-config": "^3.3.0",
     "phpunit/phpunit": "^9.5.10",
     "psalm/plugin-phpunit": "~0.16.1",
-    "vimeo/psalm": "^4.13.1"
+    "vimeo/psalm": "^4.14.0"
   },
   "config": {
     "platform": {

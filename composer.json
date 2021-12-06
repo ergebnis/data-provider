@@ -1,30 +1,44 @@
 {
   "name": "ergebnis/data-provider",
-  "type": "library",
   "description": "Provides generic data providers for use with phpunit/phpunit.",
+  "license": "MIT",
+  "type": "library",
   "keywords": [
     "phpunit",
     "data-provider"
   ],
-  "homepage": "https://github.com/ergebnis/data-provider",
-  "license": "MIT",
   "authors": [
     {
       "name": "Andreas Möller",
       "email": "am@localheinz.com"
     }
   ],
+  "homepage": "https://github.com/ergebnis/data-provider",
+  "support": {
+    "issues": "https://github.com/ergebnis/data-provider/issues",
+    "source": "https://github.com/ergebnis/data-provider"
+  },
   "require": {
     "php": "^7.3 || ^8.0",
     "fakerphp/faker": "^1.17.0"
   },
   "require-dev": {
-    "ergebnis/composer-normalize": "^2.16.0",
+    "ergebnis/composer-normalize": "^2.17.0",
     "ergebnis/license": "^1.1.0",
     "ergebnis/php-cs-fixer-config": "^3.3.0",
     "phpunit/phpunit": "^9.5.10",
     "psalm/plugin-phpunit": "~0.16.1",
     "vimeo/psalm": "^4.14.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ergebnis\\DataProvider\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ergebnis\\DataProvider\\Test\\": "test/"
+    }
   },
   "config": {
     "platform": {
@@ -38,19 +52,5 @@
       "indent-size": 2,
       "indent-style": "space"
     }
-  },
-  "autoload": {
-    "psr-4": {
-      "Ergebnis\\DataProvider\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Ergebnis\\DataProvider\\Test\\": "test/"
-    }
-  },
-  "support": {
-    "issues": "https://github.com/ergebnis/data-provider/issues",
-    "source": "https://github.com/ergebnis/data-provider"
   }
 }

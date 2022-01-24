@@ -91,11 +91,11 @@ final class FloatProvider extends AbstractProvider
         $faker = self::faker();
 
         return [
-            'float-less-than-minus-one' => -0.01 - $faker->randomFloat(null, 1),
+            'float-less-than-minus-one' => (-1 * \PHP_FLOAT_EPSILON) - $faker->randomFloat(null, 1),
             'float-minus-one' => -1.0,
             'float-zero' => 0.0,
             'float-plus-one' => 1.0,
-            'float-greater-than-plus-one' => 0.01 + $faker->randomFloat(null, 1),
+            'float-greater-than-plus-one' => \PHP_FLOAT_EPSILON + $faker->randomFloat(null, 1),
         ];
     }
 }

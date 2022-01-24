@@ -13,6 +13,9 @@
     </MoreSpecificReturnType>
   </file>
   <file src="src/FloatProvider.php">
+    <InvalidOperand occurrences="1">
+      <code>-1 * \PHP_FLOAT_EPSILON</code>
+    </InvalidOperand>
     <MoreSpecificReturnType occurrences="7">
       <code>\Generator&lt;string, array{0: float}&gt;</code>
       <code>\Generator&lt;string, array{0: float}&gt;</code>

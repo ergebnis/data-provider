@@ -15,15 +15,23 @@ jobs:
 
     steps:
       - name: "Determine tag"
-        id: "determine-tag"
-        run: "echo \"::set-output name=tag::${GITHUB_REF#refs/tags/}\""
+        run: "echo \"RELEASE_TAG=${GITHUB_REF#refs/tags/}\" >> $GITHUB_ENV"
 
       - name: "Create release"
-        uses: "actions/create-release@v1.1.4"
-        env:
-          GITHUB_TOKEN: "${{ secrets.ERGEBNIS_BOT_TOKEN }}"
+        uses: "actions/github-script@v5"
         with:
-          draft: false
-          prerelease: false
-          release_name: "${{ steps.determine-tag.outputs.tag }}"
-          tag_name: "${{ steps.determine-tag.outputs.tag }}"
+          github-token: "${{ secrets.ERGEBNIS_BOT_TOKEN }}"
+          script: |
+            try {
+              await github.rest.repos.createRelease({
+                draft: false,
+                generate_release_notes: true,
+                name: process.env.RELEASE_TAG,
+                owner: context.repo.owner,
+                prerelease: false,
+                repo: context.repo.repo,
+                tag_name: process.env.RELEASE_TAG,
+              });
+            } catch (error) {
+              core.setFailed(error.message);
+            }

@@ -18,10 +18,7 @@ namespace Ergebnis\DataProvider\Test\Util\Specification;
  */
 final class Closure implements Specification
 {
-    /**
-     * @var \Closure
-     */
-    private $closure;
+    private \Closure $closure;
 
     private function __construct(\Closure $closure)
     {

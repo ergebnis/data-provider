@@ -19,7 +19,7 @@
     "source": "https://github.com/ergebnis/data-provider"
   },
   "require": {
-    "php": "^7.3 || ^8.0",
+    "php": "^7.4 || ^8.0",
     "fakerphp/faker": "^1.17.0"
   },
   "require-dev": {
@@ -42,7 +42,7 @@
   },
   "config": {
     "platform": {
-      "php": "7.3.32"
+      "php": "7.4.26"
     },
     "preferred-install": "dist",
     "sort-packages": true

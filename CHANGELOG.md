@@ -11,6 +11,7 @@ For a full diff see [`1.0.0...main`][1.0.0...main].
 ### Changed
 
 - Dropped support for PHP 7.3 ([#21]), by [@localheinz]
+- Started using `PHP_FLOAT_EPSILON` instead of `0.1` in `FloatProvider` ([#23]), by [@localheinz]
 
 ## [`1.0.0`][1.0.0]
 

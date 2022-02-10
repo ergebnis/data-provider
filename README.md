@@ -115,9 +115,11 @@ For examples, see [`Ergebnis\DataProvider\Test\Unit\ResourceProviderTest`](test/
 * `empty()` provides an empty `string`
 * `trimmed()` provides non-empty, non-blank `strings` without leading and trailing whitespace
 * `untrimmed()` provides non-empty, non-blank `string`s with additional leading and trailing whitespace
+* `uuid()` provides lower- and upper-case UUID `string`s
 * `withWhitespace()` provides non-empty, non-blank, trimmed `string`s containing whitespace
 
 For examples, see [`Ergebnis\DataProvider\Test\Unit\StringProviderTest`](test/Unit/StringProviderTest.php).
+
 ## Changelog
 
 Please have a look at [`CHANGELOG.md`](CHANGELOG.md).

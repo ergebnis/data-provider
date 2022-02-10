@@ -69,6 +69,16 @@ final class StringProvider extends AbstractProvider
     /**
      * @return \Generator<string, array{0: string}>
      */
+    public static function uuid(): \Generator
+    {
+        yield from self::provideDataForValuesWhere(self::values(), static function (string $value): bool {
+            return 1 === \preg_match('/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i', $value);
+        });
+    }
+
+    /**
+     * @return \Generator<string, array{0: string}>
+     */
     public static function withWhitespace(): \Generator
     {
         yield from self::provideDataForValuesWhere(self::values(), static function (string $value): bool {
@@ -104,6 +114,11 @@ final class StringProvider extends AbstractProvider
 
         $emptyValues = [
             'string-empty' => '',
+        ];
+
+        $uuidValues = [
+            'string-uuid-case-lower' => \strtolower($faker->uuid()),
+            'string-uuid-case-upper' => \strtoupper($faker->uuid()),
         ];
 
         /** @var array<string, string> $untrimmedValues */
@@ -154,6 +169,7 @@ final class StringProvider extends AbstractProvider
             $blankValues,
             $emptyValues,
             $untrimmedValues,
+            $uuidValues,
             $withWhitespaceValues,
         );
     }

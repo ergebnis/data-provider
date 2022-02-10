@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.18.1@dda05fa913f4dc6eb3386f2f7ce5a45d37a71bcb">
+<files psalm-version="4.20.0@f82a70e7edfc6cf2705e9374c8a0b6a974a779ed">
   <file src="src/AbstractProvider.php">
     <MixedAssignment occurrences="1">
       <code>$value</code>
@@ -53,7 +53,8 @@
     </MoreSpecificReturnType>
   </file>
   <file src="src/StringProvider.php">
-    <MoreSpecificReturnType occurrences="6">
+    <MoreSpecificReturnType occurrences="7">
+      <code>\Generator&lt;string, array{0: string}&gt;</code>
       <code>\Generator&lt;string, array{0: string}&gt;</code>
       <code>\Generator&lt;string, array{0: string}&gt;</code>
       <code>\Generator&lt;string, array{0: string}&gt;</code>

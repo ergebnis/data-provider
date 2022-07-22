@@ -20,7 +20,7 @@
   },
   "require": {
     "php": "^7.4 || ^8.0",
-    "fakerphp/faker": "^1.19.0"
+    "fakerphp/faker": "^1.20.0"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2.28.3",

@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`1.2.0...main`][1.2.0...main].
 
+### Changed
+
+- Dropped support for PHP 7.4 ([#119]), by [@localheinz]
+
 ## [`1.2.0`][1.2.0]
 
 For a full diff see [`1.1.0...1.2.0`][1.1.0...1.2.0].
@@ -45,5 +49,6 @@ For a full diff see [`a5f2657...1.0.0`][a5f2657...1.0.0].
 [#1]: https://github.com/ergebnis/data-provider/pull/1
 [#21]: https://github.com/ergebnis/data-provider/pull/21
 [#40]: https://github.com/ergebnis/data-provider/pull/40
+[#119]: https://github.com/ergebnis/data-provider/pull/119
 
 [@localheinz]: https://github.com/localheinz

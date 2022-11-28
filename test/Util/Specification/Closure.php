@@ -41,7 +41,7 @@ final class Closure implements Specification
         if (!\is_bool($isSatisfiedBy)) {
             throw new \RuntimeException(\sprintf(
                 'Closure should return bool, got "%s" instead.',
-                \is_object($value) ? \get_class($value) : \gettype($value),
+                \is_object($value) ? $value::class : \gettype($value),
             ));
         }
 

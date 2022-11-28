@@ -101,7 +101,6 @@ final class StringProvider extends AbstractProvider
 
         $whitespaceCharacters = self::whitespaceCharacters();
 
-        /** @var array<string, string> $blankValues */
         $blankValues = \array_combine(
             \array_map(static function (string $key): string {
                 return \sprintf(
@@ -121,7 +120,6 @@ final class StringProvider extends AbstractProvider
             'string-uuid-case-upper' => \strtoupper($faker->uuid()),
         ];
 
-        /** @var array<string, string> $untrimmedValues */
         $untrimmedValues = \array_combine(
             \array_map(static function (string $key): string {
                 return \sprintf(
@@ -145,7 +143,6 @@ final class StringProvider extends AbstractProvider
             }, $whitespaceCharacters),
         );
 
-        /** @var array<string, string> $withWhitespaceValues */
         $withWhitespaceValues = \array_combine(
             \array_map(static function (string $key): string {
                 return \sprintf(

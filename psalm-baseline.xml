@@ -1,83 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.4.0@62db5d4f6a7ae0a20f7cc5a4952d730272fc0863">
+<files psalm-version="5.8.0@9cf4f60a333f779ad3bc704a555920e81d4fdcda">
   <file src="src/AbstractProvider.php">
-    <MixedAssignment occurrences="1">
+    <MixedAssignment>
       <code>$value</code>
     </MixedAssignment>
   </file>
   <file src="src/BoolProvider.php">
-    <MoreSpecificReturnType occurrences="3">
-      <code>\Generator&lt;string, array{0: bool}&gt;</code>
-      <code>\Generator&lt;string, array{0: bool}&gt;</code>
-      <code>\Generator&lt;string, array{0: bool}&gt;</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[\Generator<string, array{0: bool}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: bool}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: bool}>]]></code>
     </MoreSpecificReturnType>
   </file>
   <file src="src/FloatProvider.php">
-    <InvalidOperand occurrences="1">
+    <InvalidOperand>
       <code>-1 * \PHP_FLOAT_EPSILON</code>
     </InvalidOperand>
-    <MoreSpecificReturnType occurrences="7">
-      <code>\Generator&lt;string, array{0: float}&gt;</code>
-      <code>\Generator&lt;string, array{0: float}&gt;</code>
-      <code>\Generator&lt;string, array{0: float}&gt;</code>
-      <code>\Generator&lt;string, array{0: float}&gt;</code>
-      <code>\Generator&lt;string, array{0: float}&gt;</code>
-      <code>\Generator&lt;string, array{0: float}&gt;</code>
-      <code>\Generator&lt;string, array{0: float}&gt;</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[\Generator<string, array{0: float}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: float}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: float}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: float}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: float}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: float}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: float}>]]></code>
     </MoreSpecificReturnType>
   </file>
   <file src="src/IntProvider.php">
-    <MoreSpecificReturnType occurrences="7">
-      <code>\Generator&lt;string, array{0: int}&gt;</code>
-      <code>\Generator&lt;string, array{0: int}&gt;</code>
-      <code>\Generator&lt;string, array{0: int}&gt;</code>
-      <code>\Generator&lt;string, array{0: int}&gt;</code>
-      <code>\Generator&lt;string, array{0: int}&gt;</code>
-      <code>\Generator&lt;string, array{0: int}&gt;</code>
-      <code>\Generator&lt;string, array{0: int}&gt;</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[\Generator<string, array{0: int}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: int}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: int}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: int}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: int}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: int}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: int}>]]></code>
     </MoreSpecificReturnType>
   </file>
   <file src="src/NullProvider.php">
-    <MoreSpecificReturnType occurrences="1">
-      <code>\Generator&lt;string, array{0: null}&gt;</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[\Generator<string, array{0: null}>]]></code>
     </MoreSpecificReturnType>
   </file>
   <file src="src/ObjectProvider.php">
-    <MoreSpecificReturnType occurrences="1">
-      <code>\Generator&lt;string, array{0: bool}&gt;</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[\Generator<string, array{0: bool}>]]></code>
     </MoreSpecificReturnType>
   </file>
   <file src="src/ResourceProvider.php">
-    <MoreSpecificReturnType occurrences="1">
-      <code>\Generator&lt;string, array{0: resource}&gt;</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[\Generator<string, array{0: resource}>]]></code>
     </MoreSpecificReturnType>
   </file>
   <file src="src/StringProvider.php">
-    <MoreSpecificReturnType occurrences="7">
-      <code>\Generator&lt;string, array{0: string}&gt;</code>
-      <code>\Generator&lt;string, array{0: string}&gt;</code>
-      <code>\Generator&lt;string, array{0: string}&gt;</code>
-      <code>\Generator&lt;string, array{0: string}&gt;</code>
-      <code>\Generator&lt;string, array{0: string}&gt;</code>
-      <code>\Generator&lt;string, array{0: string}&gt;</code>
-      <code>\Generator&lt;string, array{0: string}&gt;</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
     </MoreSpecificReturnType>
   </file>
   <file src="test/Unit/AbstractProviderTestCase.php">
-    <MixedAssignment occurrences="1">
+    <MixedAssignment>
       <code>$value</code>
     </MixedAssignment>
-    <RedundantConditionGivenDocblockType occurrences="1">
+    <RedundantConditionGivenDocblockType>
       <code>assertIsArray</code>
     </RedundantConditionGivenDocblockType>
   </file>
   <file src="test/Unit/ResourceProviderTest.php">
-    <MissingClosureParamType occurrences="1">
+    <MissingClosureParamType>
       <code>$value</code>
     </MissingClosureParamType>
   </file>
   <file src="test/Util/Specification/Closure.php">
-    <MissingClosureParamType occurrences="1">
+    <ImpureFunctionCall>
+      <code>$closure($value)</code>
+    </ImpureFunctionCall>
+    <MissingClosureParamType>
       <code>$value</code>
     </MissingClosureParamType>
   </file>

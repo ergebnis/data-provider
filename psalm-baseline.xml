@@ -67,6 +67,9 @@
     <MixedAssignment>
       <code>$value</code>
     </MixedAssignment>
+    <PossiblyUnusedMethod>
+      <code>assertProvidesDataSetsForValues</code>
+    </PossiblyUnusedMethod>
     <RedundantConditionGivenDocblockType>
       <code>assertIsArray</code>
     </RedundantConditionGivenDocblockType>

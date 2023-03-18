@@ -1,7 +1,7 @@
 # data-provider
 
 [![Integrate](https://github.com/ergebnis/data-provider/workflows/Integrate/badge.svg)](https://github.com/ergebnis/data-provider/actions)
-[![Prune](https://github.com/ergebnis/data-provider/workflows/Prune/badge.svg)](https://github.com/ergebnis/data-provider/actions)
+[![Merge](https://github.com/ergebnis/data-provider/workflows/Merge/badge.svg)](https://github.com/ergebnis/data-provider/actions)
 [![Release](https://github.com/ergebnis/data-provider/workflows/Release/badge.svg)](https://github.com/ergebnis/data-provider/actions)
 [![Renew](https://github.com/ergebnis/data-provider/workflows/Renew/badge.svg)](https://github.com/ergebnis/data-provider/actions)
 
@@ -10,6 +10,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/data-provider/v/stable)](https://packagist.org/packages/ergebnis/data-provider)
 [![Total Downloads](https://poser.pugx.org/ergebnis/data-provider/downloads)](https://packagist.org/packages/ergebnis/data-provider)
+[![Monthly Downloads](http://poser.pugx.org/ergebnis/data-provider/d/monthly)](https://packagist.org/packages/ergebnis/data-provider)
 
 ## Installation
 
@@ -140,4 +141,4 @@ Please have a look at [`LICENSE.md`](LICENSE.md).
 
 ## Curious what I am up to?
 
-Follow me on [Twitter](https://twitter.com/localheinz)!
+Follow me on [Twitter](https://twitter.com/intent/follow?screen_name=localheinz)!

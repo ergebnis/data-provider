@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ed64bc23cecd018a7b6af59002097fe",
+    "content-hash": "26ff34f887bcbf91f06eb07c1410b010",
     "packages": [
         {
             "name": "fakerphp/faker",
@@ -1496,16 +1496,16 @@
         },
         {
             "name": "ergebnis/php-cs-fixer-config",
-            "version": "5.5.1",
+            "version": "5.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/php-cs-fixer-config.git",
-                "reference": "f25ed0a5c524f96f0fd30ca9acf3af00bc6734c8"
+                "reference": "b926460aa2a978dcb2cb6c8d79323d2abab27157"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/php-cs-fixer-config/zipball/f25ed0a5c524f96f0fd30ca9acf3af00bc6734c8",
-                "reference": "f25ed0a5c524f96f0fd30ca9acf3af00bc6734c8",
+                "url": "https://api.github.com/repos/ergebnis/php-cs-fixer-config/zipball/b926460aa2a978dcb2cb6c8d79323d2abab27157",
+                "reference": "b926460aa2a978dcb2cb6c8d79323d2abab27157",
                 "shasum": ""
             },
             "require": {
@@ -1553,7 +1553,7 @@
                 "issues": "https://github.com/ergebnis/php-cs-fixer-config/issues",
                 "source": "https://github.com/ergebnis/php-cs-fixer-config"
             },
-            "time": "2023-04-27T16:43:33+00:00"
+            "time": "2023-04-27T17:31:51+00:00"
         },
         {
             "name": "felixfbecker/advanced-json-rpc",

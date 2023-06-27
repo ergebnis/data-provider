@@ -13,23 +13,17 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
+use Ergebnis\DataProvider\AbstractProvider;
 use Ergebnis\DataProvider\BoolProvider;
 use Ergebnis\DataProvider\Test;
+use PHPUnit\Framework;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\DataProvider\AbstractProvider
- * @covers \Ergebnis\DataProvider\BoolProvider
- */
+#[Framework\Attributes\CoversClass(AbstractProvider::class)]
+#[Framework\Attributes\CoversClass(BoolProvider::class)]
 final class BoolProviderTest extends AbstractProviderTestCase
 {
-    /**
-     * @dataProvider \Ergebnis\DataProvider\BoolProvider::arbitrary()
-     *
-     * @param mixed $value
-     */
-    public function testArbitraryProvidesBool($value): void
+    #[Framework\Attributes\DataProviderExternal(BoolProvider::class, 'arbitrary')]
+    public function testArbitraryProvidesBool(mixed $value): void
     {
         self::assertIsBool($value);
     }
@@ -46,12 +40,8 @@ final class BoolProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    /**
-     * @dataProvider \Ergebnis\DataProvider\BoolProvider::false()
-     *
-     * @param mixed $value
-     */
-    public function testFalseProvidesFalse($value): void
+    #[Framework\Attributes\DataProviderExternal(BoolProvider::class, 'false')]
+    public function testFalseProvidesFalse(mixed $value): void
     {
         self::assertFalse($value);
     }
@@ -67,12 +57,8 @@ final class BoolProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    /**
-     * @dataProvider \Ergebnis\DataProvider\BoolProvider::true()
-     *
-     * @param mixed $value
-     */
-    public function testTrueProvidesTrue($value): void
+    #[Framework\Attributes\DataProviderExternal(BoolProvider::class, 'true')]
+    public function testTrueProvidesTrue(mixed $value): void
     {
         self::assertTrue($value);
     }

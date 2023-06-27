@@ -15,28 +15,16 @@ namespace Ergebnis\DataProvider\Test\Util\Specification;
 
 final class Equal implements Specification
 {
-    /**
-     * @var mixed
-     */
-    private $value;
-
-    /**
-     * @param mixed $value
-     */
-    private function __construct($value)
+    private function __construct(private readonly mixed $value)
     {
-        $this->value = $value;
     }
 
-    /**
-     * @param mixed $value
-     */
-    public static function create($value): self
+    public static function create(mixed $value): self
     {
         return new self($value);
     }
 
-    public function isSatisfiedBy($value): bool
+    public function isSatisfiedBy(mixed $value): bool
     {
         return $this->value == $value;
     }

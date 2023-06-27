@@ -18,7 +18,7 @@ namespace Ergebnis\DataProvider\Test\Util\Specification;
  */
 final class Closure implements Specification
 {
-    private \Closure $closure;
+    private readonly \Closure $closure;
 
     private function __construct(\Closure $closure)
     {
@@ -32,7 +32,7 @@ final class Closure implements Specification
         return new self($closure);
     }
 
-    public function isSatisfiedBy($value): bool
+    public function isSatisfiedBy(mixed $value): bool
     {
         $closure = $this->closure;
 

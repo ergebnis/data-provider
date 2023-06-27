@@ -16,9 +16,6 @@ namespace Ergebnis\DataProvider\Test\Unit;
 use Ergebnis\DataProvider\Test;
 use PHPUnit\Framework;
 
-/**
- * @internal
- */
 abstract class AbstractProviderTestCase extends Framework\TestCase
 {
     /**
@@ -29,7 +26,7 @@ abstract class AbstractProviderTestCase extends Framework\TestCase
     {
         self::assertExpectedValuesAreNotEmpty($values);
 
-        $expectedDataSets = \array_map(static function ($value): array {
+        $expectedDataSets = \array_map(static function (mixed $value): array {
             return [
                 $value,
             ];

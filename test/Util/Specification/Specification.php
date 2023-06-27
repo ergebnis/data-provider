@@ -15,8 +15,5 @@ namespace Ergebnis\DataProvider\Test\Util\Specification;
 
 interface Specification
 {
-    /**
-     * @param mixed $value
-     */
-    public function isSatisfiedBy($value): bool;
+    public function isSatisfiedBy(mixed $value): bool;
 }

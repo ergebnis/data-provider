@@ -13,23 +13,17 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
+use Ergebnis\DataProvider\AbstractProvider;
 use Ergebnis\DataProvider\NullProvider;
 use Ergebnis\DataProvider\Test;
+use PHPUnit\Framework;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\DataProvider\AbstractProvider
- * @covers \Ergebnis\DataProvider\NullProvider
- */
+#[Framework\Attributes\CoversClass(AbstractProvider::class)]
+#[Framework\Attributes\CoversClass(NullProvider::class)]
 final class NullProviderTest extends AbstractProviderTestCase
 {
-    /**
-     * @dataProvider \Ergebnis\DataProvider\NullProvider::null()
-     *
-     * @param mixed $value
-     */
-    public function testNullProvidesNull($value): void
+    #[Framework\Attributes\DataProviderExternal(NullProvider::class, 'null')]
+    public function testNullProvidesNull(mixed $value): void
     {
         self::assertNull($value);
     }

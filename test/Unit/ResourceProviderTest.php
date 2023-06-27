@@ -13,23 +13,17 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
+use Ergebnis\DataProvider\AbstractProvider;
 use Ergebnis\DataProvider\ResourceProvider;
 use Ergebnis\DataProvider\Test;
+use PHPUnit\Framework;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\DataProvider\AbstractProvider
- * @covers \Ergebnis\DataProvider\ResourceProvider
- */
+#[Framework\Attributes\CoversClass(AbstractProvider::class)]
+#[Framework\Attributes\CoversClass(ResourceProvider::class)]
 final class ResourceProviderTest extends AbstractProviderTestCase
 {
-    /**
-     * @dataProvider \Ergebnis\DataProvider\ResourceProvider::resource()
-     *
-     * @param mixed $value
-     */
-    public function testResourceProvidesResource($value): void
+    #[Framework\Attributes\DataProviderExternal(ResourceProvider::class, 'resource')]
+    public function testResourceProvidesResource(mixed $value): void
     {
         self::assertIsResource($value);
     }
@@ -37,7 +31,7 @@ final class ResourceProviderTest extends AbstractProviderTestCase
     public function testResourceReturnsGeneratorThatProvidesResource(): void
     {
         $specifications = [
-            'resource' => Test\Util\Specification\Closure::create(static function ($value): bool {
+            'resource' => Test\Util\Specification\Closure::create(static function (mixed $value): bool {
                 return \is_resource($value);
             }),
         ];

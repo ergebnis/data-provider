@@ -31,6 +31,7 @@ This package provides the following generic data providers:
 * [`Ergebnis\DataProvider\ObjectProvider`](https://github.com/ergebnis/data-provider#dataproviderobjectprovider)
 * [`Ergebnis\DataProvider\ResourceProvider`](https://github.com/ergebnis/data-provider#dataproviderresourceprovider)
 * [`Ergebnis\DataProvider\StringProvider`](https://github.com/ergebnis/data-provider#dataproviderstringprovider)
+* [`Ergebnis\DataProvider\UuidProvider`](https://github.com/ergebnis/data-provider#dataprovideruuidprovider)
 
 Since it is possible to use multiple `@dataProvider` annotations for test methods, these generic data providers allow for reuse and composition of data providers:
 
@@ -116,10 +117,17 @@ For examples, see [`Ergebnis\DataProvider\Test\Unit\ResourceProviderTest`](test/
 * `empty()` provides an empty `string`
 * `trimmed()` provides non-empty, non-blank `strings` without leading and trailing whitespace
 * `untrimmed()` provides non-empty, non-blank `string`s with additional leading and trailing whitespace
-* `uuid()` provides lower- and upper-case UUID `string`s
 * `withWhitespace()` provides non-empty, non-blank, trimmed `string`s containing whitespace
 
 For examples, see [`Ergebnis\DataProvider\Test\Unit\StringProviderTest`](test/Unit/StringProviderTest.php).
+
+#### `DataProvider\UuidProvider`
+
+* `arbitrary()` provides lower- and upper-case UUIDs
+* `caseLower()` provides a lower-case UUIDs
+* `caseUpper()` provides an upper-case UUIDs
+
+For examples, see [`Ergebnis\DataProvider\Test\Unit\UuidProviderTest`](test/Unit/UuidProviderTest.php).
 
 ## Changelog
 

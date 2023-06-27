@@ -63,6 +63,13 @@
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
     </MixedReturnTypeCoercion>
   </file>
+  <file src="src/UuidProvider.php">
+    <MixedReturnTypeCoercion>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
+    </MixedReturnTypeCoercion>
+  </file>
   <file src="test/Unit/AbstractProviderTestCase.php">
     <MixedAssignment>
       <code>$value</code>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.8.0@9cf4f60a333f779ad3bc704a555920e81d4fdcda">
+<files psalm-version="5.13.0@a0a9c27630bcf8301ee78cb06741d2907d8c9fef">
   <file src="src/AbstractProvider.php">
     <MixedAssignment>
       <code>$value</code>
     </MixedAssignment>
   </file>
   <file src="src/BoolProvider.php">
-    <MoreSpecificReturnType>
+    <MixedReturnTypeCoercion>
       <code><![CDATA[\Generator<string, array{0: bool}>]]></code>
       <code><![CDATA[\Generator<string, array{0: bool}>]]></code>
       <code><![CDATA[\Generator<string, array{0: bool}>]]></code>
-    </MoreSpecificReturnType>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="src/FloatProvider.php">
     <InvalidOperand>
       <code>-1 * \PHP_FLOAT_EPSILON</code>
     </InvalidOperand>
-    <MoreSpecificReturnType>
+    <MixedReturnTypeCoercion>
       <code><![CDATA[\Generator<string, array{0: float}>]]></code>
       <code><![CDATA[\Generator<string, array{0: float}>]]></code>
       <code><![CDATA[\Generator<string, array{0: float}>]]></code>
@@ -24,10 +24,10 @@
       <code><![CDATA[\Generator<string, array{0: float}>]]></code>
       <code><![CDATA[\Generator<string, array{0: float}>]]></code>
       <code><![CDATA[\Generator<string, array{0: float}>]]></code>
-    </MoreSpecificReturnType>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="src/IntProvider.php">
-    <MoreSpecificReturnType>
+    <MixedReturnTypeCoercion>
       <code><![CDATA[\Generator<string, array{0: int}>]]></code>
       <code><![CDATA[\Generator<string, array{0: int}>]]></code>
       <code><![CDATA[\Generator<string, array{0: int}>]]></code>
@@ -35,25 +35,25 @@
       <code><![CDATA[\Generator<string, array{0: int}>]]></code>
       <code><![CDATA[\Generator<string, array{0: int}>]]></code>
       <code><![CDATA[\Generator<string, array{0: int}>]]></code>
-    </MoreSpecificReturnType>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="src/NullProvider.php">
-    <MoreSpecificReturnType>
+    <MixedReturnTypeCoercion>
       <code><![CDATA[\Generator<string, array{0: null}>]]></code>
-    </MoreSpecificReturnType>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="src/ObjectProvider.php">
-    <MoreSpecificReturnType>
+    <MixedReturnTypeCoercion>
       <code><![CDATA[\Generator<string, array{0: bool}>]]></code>
-    </MoreSpecificReturnType>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="src/ResourceProvider.php">
-    <MoreSpecificReturnType>
+    <MixedReturnTypeCoercion>
       <code><![CDATA[\Generator<string, array{0: resource}>]]></code>
-    </MoreSpecificReturnType>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="src/StringProvider.php">
-    <MoreSpecificReturnType>
+    <MixedReturnTypeCoercion>
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
@@ -61,7 +61,7 @@
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
-    </MoreSpecificReturnType>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="test/Unit/AbstractProviderTestCase.php">
     <MixedAssignment>

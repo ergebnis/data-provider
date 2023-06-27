@@ -8,9 +8,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`1.3.0...main`][1.3.0...main].
 
+### Added
+
+- Dropped support for PHP 8.0 ([#226]), by [@localheinz]
+- Added `UuidProvider` ([#230]), by [@localheinz]
+
 ### Changed
 
 - Dropped support for PHP 8.0 ([#226]), by [@localheinz]
+
+### Removed
+
+- Removed `StringProvider::uuid()` ([#230]), by [@localheinz]
 
 ## [`1.3.0`][1.3.0]
 
@@ -61,5 +70,6 @@ For a full diff see [`a5f2657...1.0.0`][a5f2657...1.0.0].
 [#40]: https://github.com/ergebnis/data-provider/pull/40
 [#119]: https://github.com/ergebnis/data-provider/pull/119
 [#226]: https://github.com/ergebnis/data-provider/pull/226
+[#230]: https://github.com/ergebnis/data-provider/pull/230
 
 [@localheinz]: https://github.com/localheinz

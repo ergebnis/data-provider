@@ -46,8 +46,6 @@ final class StringProviderTest extends AbstractProviderTestCase
             'string-untrimmed-line-feed' => Test\Util\Specification\Pattern::create('/^\n{1,5}\w+\n{1,5}$/'),
             'string-untrimmed-space' => Test\Util\Specification\Pattern::create('/^\s{1,5}\w+\s{1,5}$/'),
             'string-untrimmed-tab' => Test\Util\Specification\Pattern::create('/^\t{1,5}\w+\t{1,5}$/'),
-            'string-uuid-case-lower' => Test\Util\Specification\Pattern::create('/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/'),
-            'string-uuid-case-upper' => Test\Util\Specification\Pattern::create('/^[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}$/'),
             'string-with-whitespace-carriage-return' => Test\Util\Specification\Pattern::create('/^\w+(\r+\w+){1,4}$/'),
             'string-with-whitespace-line-feed' => Test\Util\Specification\Pattern::create('/^\w+(\n+\w+){1,4}$/'),
             'string-with-whitespace-space' => Test\Util\Specification\Pattern::create('/^\w+(\s+\w+){1,4}$/'),
@@ -120,8 +118,6 @@ final class StringProviderTest extends AbstractProviderTestCase
             'string-arbitrary-word' => Test\Util\Specification\Closure::create(static function (string $value): bool {
                 return '' !== $value && '' !== \trim($value);
             }),
-            'string-uuid-case-lower' => Test\Util\Specification\Pattern::create('/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/'),
-            'string-uuid-case-upper' => Test\Util\Specification\Pattern::create('/^[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}$/'),
             'string-with-whitespace-carriage-return' => Test\Util\Specification\Pattern::create('/^\w+(\r+\w+){1,4}$/'),
             'string-with-whitespace-line-feed' => Test\Util\Specification\Pattern::create('/^\w+(\n+\w+){1,4}$/'),
             'string-with-whitespace-space' => Test\Util\Specification\Pattern::create('/^\w+(\s+\w+){1,4}$/'),
@@ -143,18 +139,6 @@ final class StringProviderTest extends AbstractProviderTestCase
         ];
 
         $provider = StringProvider::untrimmed();
-
-        self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
-    }
-
-    public function testUuidReturnsGeneratorThatProvidesUuidStrings(): void
-    {
-        $specifications = [
-            'string-uuid-case-lower' => Test\Util\Specification\Pattern::create('/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/'),
-            'string-uuid-case-upper' => Test\Util\Specification\Pattern::create('/^[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}$/'),
-        ];
-
-        $provider = StringProvider::uuid();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }

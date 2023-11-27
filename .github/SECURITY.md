@@ -4,13 +4,13 @@
 
 The following versions of `ergebnis/data-provider` have active support:
 
-- `^2.0.0`
+- `^3.1.0`
 
 ## Unsupported Versions
 
 The following versions of `ergebnis/data-provider` have reached their end of life:
 
-- `<2.0.0`
+- `<3.1.0`
 
 ## Reporting a Vulnerability
 

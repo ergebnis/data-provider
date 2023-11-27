@@ -26,7 +26,6 @@ For a full diff see [`1.3.0...2.0.0`][1.3.0...2.0.0].
 
 ### Added
 
-- Dropped support for PHP 8.0 ([#226]), by [@localheinz]
 - Added `UuidProvider` ([#230]), by [@localheinz]
 
 ### Changed

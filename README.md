@@ -12,6 +12,8 @@
 [![Total Downloads](https://poser.pugx.org/ergebnis/data-provider/downloads)](https://packagist.org/packages/ergebnis/data-provider)
 [![Monthly Downloads](http://poser.pugx.org/ergebnis/data-provider/d/monthly)](https://packagist.org/packages/ergebnis/data-provider)
 
+This package provides generic data providers for use with [`phpunit/phpunit`](https://github.com/sebastianbergmann/phpunit).
+
 ## Installation
 
 Run
@@ -33,7 +35,7 @@ This package provides the following generic data providers:
 - [`Ergebnis\DataProvider\StringProvider`](https://github.com/ergebnis/data-provider#dataproviderstringprovider)
 - [`Ergebnis\DataProvider\UuidProvider`](https://github.com/ergebnis/data-provider#dataprovideruuidprovider)
 
-Since it is possible to use multiple `@dataProvider` annotations for test methods, these generic data providers allow for reuse and composition of data providers:
+Since it is possible to use multiple [`@dataProvider` annotations](https://docs.phpunit.de/en/10.4/annotations.html#dataprovider) or [`PHPUnit\Framework\Attribute\DataProviderExternal` attributes](https://docs.phpunit.de/en/10.4/attributes.html#dataproviderexternal) for test methods, these generic data providers allow for reuse and composition of data providers:
 
 ```php
 <?php
@@ -42,6 +44,7 @@ declare(strict_types=1);
 
 namespace Example\Test;
 
+use Ergebnis\DataProvider;
 use PHPUnit\Framework;
 
 final class ExampleTest extends Framework\TestCase
@@ -50,7 +53,17 @@ final class ExampleTest extends Framework\TestCase
      * @dataProvider \Ergebnis\DataProvider\StringProvider::blank()
      * @dataProvider \Ergebnis\DataProvider\StringProvider::empty()
      */
-    public function testFromNameRejectsBlankOrEmptyStrings(string $value): void
+    public function testFromNameRejectsInvalidValueWithAnnotation(string $value): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Value can not be an empty or blank string.');
+
+        UserName::fromString($value);
+    }
+
+    #[Framework\DataProviderExternal(DataProvider\StringProvider::class, 'blank')]
+    #[Framework\DataProviderExternal(DataProvider\StringProvider::class, 'empty')]
+    public function testFromNameRejectsInvalidValueWithAttribute(string $value): void
     {
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage('Value can not be an empty or blank string.');
@@ -131,26 +144,36 @@ For examples, see [`Ergebnis\DataProvider\Test\Unit\UuidProviderTest`](test/Unit
 
 ## Changelog
 
-Please have a look at [`CHANGELOG.md`](CHANGELOG.md).
+The maintainers of this package record notable changes to this project in a [changelog](CHANGELOG.md).
 
 ## Contributing
 
-Please have a look at [`CONTRIBUTING.md`](.github/CONTRIBUTING.md).
+The maintainers of this package suggest following the [contribution guide](.github/CONTRIBUTING.md).
 
 ## Code of Conduct
 
-Please have a look at [`CODE_OF_CONDUCT.md`](https://github.com/ergebnis/.github/blob/main/CODE_OF_CONDUCT.md).
+The maintainers of this package ask contributors to follow the [code of conduct](https://github.com/ergebnis/.github/blob/main/CODE_OF_CONDUCT.md).
+
+## General Support Policy
+
+The maintainers of this package provide limited support.
+
+You can support the maintenance of this package by [sponsoring @localheinz](https://github.com/sponsors/localheinz) or [requesting an invoice for services related to this package](mailto:am@localheinz.com?subject=ergebnis/data-provider:%20Requesting%20invoice%20for%20services).
+
+## PHP Version Support Policy
+
+This package supports PHP versions with [active support](https://www.php.net/supported-versions.php).
+
+The maintainers of this package add support for a PHP version following its initial release and drop support for a PHP version when it has reached its end of active support.
 
 ## Security Policy
 
-Please have a look at [`SECURITY.md`](.github/SECURITY.md).
+This package has a [security policy](.github/SECURITY.md).
 
 ## License
 
-This package is licensed using the MIT License.
+This package uses the [MIT license](LICENSE.md).
 
-Please have a look at [`LICENSE.md`](LICENSE.md).
+## Social
 
-## Curious what I am up to?
-
-Follow me on [Twitter](https://twitter.com/intent/follow?screen_name=localheinz)!
+Follow [@localheinz](https://twitter.com/intent/follow?screen_name=localheinz) and [@ergebnis](https://twitter.com/intent/follow?screen_name=ergebnis) on Twitter.

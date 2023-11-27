@@ -14,6 +14,8 @@ jobs:
 
     runs-on: "ubuntu-latest"
 
+    timeout-minutes: 5
+
     strategy:
       matrix:
         php-version:
@@ -27,7 +29,7 @@ jobs:
         uses: "actions/checkout@v4.1.1"
 
       - name: "Set up PHP"
-        uses: "shivammathur/setup-php@2.27.1"
+        uses: "shivammathur/setup-php@2.28.0"
         with:
           coverage: "xdebug"
           extensions: "none, ctype, curl, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
@@ -73,6 +75,8 @@ jobs:
 
     runs-on: "ubuntu-latest"
 
+    timeout-minutes: 5
+
     strategy:
       matrix:
         php-version:
@@ -93,7 +97,7 @@ jobs:
           strict: true
 
       - name: "Set up PHP"
-        uses: "shivammathur/setup-php@2.27.1"
+        uses: "shivammathur/setup-php@2.28.0"
         with:
           coverage: "none"
           extensions: "none, ctype, curl, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
@@ -143,6 +147,8 @@ jobs:
 
     runs-on: "ubuntu-latest"
 
+    timeout-minutes: 5
+
     strategy:
       matrix:
         php-version:
@@ -156,7 +162,7 @@ jobs:
         uses: "actions/checkout@v4.1.1"
 
       - name: "Set up PHP"
-        uses: "shivammathur/setup-php@2.27.1"
+        uses: "shivammathur/setup-php@2.28.0"
         with:
           coverage: "none"
           extensions: "none, ctype, curl, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
@@ -190,12 +196,14 @@ jobs:
           trust-gpg-keys: "0x033E5F8D801A2F8D"
 
       - name: "Run maglnet/composer-require-checker"
-        run: ".phive/composer-require-checker check --config-file=$(pwd)/composer-require-checker.json"
+        run: ".phive/composer-require-checker check --ansi --config-file=$(pwd)/composer-require-checker.json --verbose"
 
   mutation-tests:
     name: "Mutation Tests"
 
     runs-on: "ubuntu-latest"
+
+    timeout-minutes: 5
 
     strategy:
       matrix:
@@ -210,7 +218,7 @@ jobs:
         uses: "actions/checkout@v4.1.1"
 
       - name: "Set up PHP"
-        uses: "shivammathur/setup-php@2.27.1"
+        uses: "shivammathur/setup-php@2.28.0"
         with:
           coverage: "xdebug"
           extensions: "none, ctype, curl, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
@@ -247,6 +255,8 @@ jobs:
 
     runs-on: "ubuntu-latest"
 
+    timeout-minutes: 5
+
     strategy:
       matrix:
         php-version:
@@ -260,7 +270,7 @@ jobs:
         uses: "actions/checkout@v4.1.1"
 
       - name: "Set up PHP"
-        uses: "shivammathur/setup-php@2.27.1"
+        uses: "shivammathur/setup-php@2.28.0"
         with:
           coverage: "none"
           extensions: "none, ctype, curl, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
@@ -307,6 +317,8 @@ jobs:
 
     runs-on: "ubuntu-latest"
 
+    timeout-minutes: 5
+
     strategy:
       matrix:
         php-version:
@@ -320,7 +332,7 @@ jobs:
         uses: "actions/checkout@v4.1.1"
 
       - name: "Set up PHP"
-        uses: "shivammathur/setup-php@2.27.1"
+        uses: "shivammathur/setup-php@2.28.0"
         with:
           coverage: "none"
           extensions: "none, ctype, curl, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
@@ -355,6 +367,8 @@ jobs:
 
     runs-on: "ubuntu-latest"
 
+    timeout-minutes: 5
+
     strategy:
       matrix:
         php-version:
@@ -368,7 +382,7 @@ jobs:
         uses: "actions/checkout@v4.1.1"
 
       - name: "Set up PHP"
-        uses: "shivammathur/setup-php@2.27.1"
+        uses: "shivammathur/setup-php@2.28.0"
         with:
           coverage: "none"
           extensions: "none, ctype, curl, dom, json, mbstring, opcache, pcntl, phar, posix, simplexml, tokenizer, xml, xmlwriter"
@@ -406,6 +420,8 @@ jobs:
 
     runs-on: "ubuntu-latest"
 
+    timeout-minutes: 5
+
     strategy:
       matrix:
         php-version:
@@ -422,7 +438,7 @@ jobs:
         uses: "actions/checkout@v4.1.1"
 
       - name: "Set up PHP"
-        uses: "shivammathur/setup-php@2.27.1"
+        uses: "shivammathur/setup-php@2.28.0"
         with:
           coverage: "none"
           extensions: "none, ctype, curl, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"

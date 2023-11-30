@@ -18,7 +18,7 @@ namespace Ergebnis\DataProvider\Test\Util\Specification;
  */
 final class Identical implements Specification
 {
-    private function __construct(private readonly mixed $value)
+    private function __construct(private mixed $value)
     {
     }
 

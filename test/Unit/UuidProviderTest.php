@@ -11,16 +11,18 @@ declare(strict_types=1);
  * @see https://github.com/ergebnis/data-provider
  */
 
-use Ergebnis\DataProvider\AbstractProvider;
 use Ergebnis\DataProvider\Test;
 use Ergebnis\DataProvider\UuidProvider;
-use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(AbstractProvider::class)]
-#[Framework\Attributes\CoversClass(UuidProvider::class)]
+/**
+ * @covers \Ergebnis\DataProvider\AbstractProvider
+ * @covers \Ergebnis\DataProvider\UuidProvider
+ */
 final class UuidProviderTest extends Test\Unit\AbstractProviderTestCase
 {
-    #[Framework\Attributes\DataProviderExternal(UuidProvider::class, 'arbitrary')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\UuidProvider::arbitrary
+     */
     public function testArbitraryProvidesUuids(string $value): void
     {
         self::assertMatchesRegularExpression('/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i', $value);

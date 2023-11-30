@@ -15,7 +15,7 @@ namespace Ergebnis\DataProvider\Test\Util\Specification;
 
 final class Pattern implements Specification
 {
-    private function __construct(private readonly string $pattern)
+    private function __construct(private string $pattern)
     {
     }
 

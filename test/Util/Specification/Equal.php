@@ -15,7 +15,7 @@ namespace Ergebnis\DataProvider\Test\Util\Specification;
 
 final class Equal implements Specification
 {
-    private function __construct(private readonly mixed $value)
+    private function __construct(private mixed $value)
     {
     }
 

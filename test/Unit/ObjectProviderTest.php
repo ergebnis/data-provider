@@ -13,16 +13,18 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
-use Ergebnis\DataProvider\AbstractProvider;
 use Ergebnis\DataProvider\ObjectProvider;
 use Ergebnis\DataProvider\Test;
-use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(AbstractProvider::class)]
-#[Framework\Attributes\CoversClass(ObjectProvider::class)]
+/**
+ * @covers \Ergebnis\DataProvider\AbstractProvider
+ * @covers \Ergebnis\DataProvider\ObjectProvider
+ */
 final class ObjectProviderTest extends AbstractProviderTestCase
 {
-    #[Framework\Attributes\DataProviderExternal(ObjectProvider::class, 'object')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\ObjectProvider::object
+     */
     public function testObjectProvidesObject(mixed $value): void
     {
         self::assertIsObject($value);

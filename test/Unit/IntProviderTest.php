@@ -13,16 +13,18 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
-use Ergebnis\DataProvider\AbstractProvider;
 use Ergebnis\DataProvider\IntProvider;
 use Ergebnis\DataProvider\Test;
-use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(AbstractProvider::class)]
-#[Framework\Attributes\CoversClass(IntProvider::class)]
+/**
+ * @covers \Ergebnis\DataProvider\AbstractProvider
+ * @covers \Ergebnis\DataProvider\IntProvider
+ */
 final class IntProviderTest extends AbstractProviderTestCase
 {
-    #[Framework\Attributes\DataProviderExternal(IntProvider::class, 'arbitrary')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\IntProvider::arbitrary
+     */
     public function testArbitraryProvidesInt(mixed $value): void
     {
         self::assertIsInt($value);
@@ -47,7 +49,9 @@ final class IntProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(IntProvider::class, 'lessThanZero')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\IntProvider::lessThanZero
+     */
     public function testLessThanZeroProvidesIntLessThanZero(int $value): void
     {
         self::assertLessThan(0, $value);
@@ -67,7 +71,9 @@ final class IntProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(IntProvider::class, 'zero')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\IntProvider::zero
+     */
     public function testZeroProvidesZero(int $value): void
     {
         self::assertSame(0, $value);
@@ -84,7 +90,9 @@ final class IntProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(IntProvider::class, 'greaterThanZero')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\IntProvider::greaterThanZero
+     */
     public function testGreaterThanZeroProvidesIntGreaterThanZero(int $value): void
     {
         self::assertGreaterThan(0, $value);
@@ -104,7 +112,9 @@ final class IntProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(IntProvider::class, 'lessThanOne')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\IntProvider::lessThanOne
+     */
     public function testLessThanOneProvidesIntLessThanOne(int $value): void
     {
         self::assertLessThan(1, $value);
@@ -136,7 +146,9 @@ final class IntProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(IntProvider::class, 'greaterThanOne')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\IntProvider::greaterThanOne
+     */
     public function testGreaterThanOneProvidesIntGreaterThanOne(int $value): void
     {
         self::assertGreaterThan(1, $value);

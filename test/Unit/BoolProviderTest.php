@@ -13,16 +13,18 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
-use Ergebnis\DataProvider\AbstractProvider;
 use Ergebnis\DataProvider\BoolProvider;
 use Ergebnis\DataProvider\Test;
-use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(AbstractProvider::class)]
-#[Framework\Attributes\CoversClass(BoolProvider::class)]
+/**
+ * @covers \Ergebnis\DataProvider\AbstractProvider
+ * @covers \Ergebnis\DataProvider\BoolProvider
+ */
 final class BoolProviderTest extends AbstractProviderTestCase
 {
-    #[Framework\Attributes\DataProviderExternal(BoolProvider::class, 'arbitrary')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\BoolProvider::arbitrary
+     */
     public function testArbitraryProvidesBool(mixed $value): void
     {
         self::assertIsBool($value);
@@ -40,7 +42,9 @@ final class BoolProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(BoolProvider::class, 'false')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\BoolProvider::false
+     */
     public function testFalseProvidesFalse(mixed $value): void
     {
         self::assertFalse($value);
@@ -57,7 +61,9 @@ final class BoolProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(BoolProvider::class, 'true')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\BoolProvider::true
+     */
     public function testTrueProvidesTrue(mixed $value): void
     {
         self::assertTrue($value);

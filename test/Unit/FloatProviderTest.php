@@ -13,16 +13,18 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
-use Ergebnis\DataProvider\AbstractProvider;
 use Ergebnis\DataProvider\FloatProvider;
 use Ergebnis\DataProvider\Test;
-use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(AbstractProvider::class)]
-#[Framework\Attributes\CoversClass(FloatProvider::class)]
+/**
+ * @covers \Ergebnis\DataProvider\AbstractProvider
+ * @covers \Ergebnis\DataProvider\FloatProvider
+ */
 final class FloatProviderTest extends AbstractProviderTestCase
 {
-    #[Framework\Attributes\DataProviderExternal(FloatProvider::class, 'arbitrary')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\FloatProvider::arbitrary
+     */
     public function testArbitraryProvidesFloat(mixed $value): void
     {
         self::assertIsFloat($value);
@@ -47,7 +49,9 @@ final class FloatProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(FloatProvider::class, 'lessThanZero')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\FloatProvider::lessThanZero
+     */
     public function testLessThanZeroProvidesFloatLessThanZero(float $value): void
     {
         self::assertLessThan(0, $value);
@@ -67,7 +71,9 @@ final class FloatProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(FloatProvider::class, 'zero')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\FloatProvider::zero
+     */
     public function testZeroProvidesZero(float $value): void
     {
         self::assertSame(0.0, $value);
@@ -84,7 +90,9 @@ final class FloatProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(FloatProvider::class, 'greaterThanZero')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\FloatProvider::greaterThanZero
+     */
     public function testGreaterThanZeroProvidesFloatGreaterThanZero(float $value): void
     {
         self::assertGreaterThan(0.0, $value);
@@ -104,7 +112,9 @@ final class FloatProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(FloatProvider::class, 'lessThanOne')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\FloatProvider::lessThanOne
+     */
     public function testLessThanOneProvidesFloatLessThanOne(float $value): void
     {
         self::assertLessThan(1, $value);
@@ -136,7 +146,9 @@ final class FloatProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(FloatProvider::class, 'greaterThanOne')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\FloatProvider::greaterThanOne
+     */
     public function testGreaterThanOneProvidesFloatGreaterThanOne(float $value): void
     {
         self::assertGreaterThan(1, $value);

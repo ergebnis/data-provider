@@ -16,7 +16,9 @@ namespace Ergebnis\DataProvider\Test\Unit\Exception;
 use Ergebnis\DataProvider\Exception;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Exception\EmptyValues::class)]
+/**
+ * @covers \Ergebnis\DataProvider\Exception\EmptyValues
+ */
 final class EmptyValuesTest extends Framework\TestCase
 {
     public function testCreateReturnsException(): void

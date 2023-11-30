@@ -13,16 +13,18 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
-use Ergebnis\DataProvider\AbstractProvider;
 use Ergebnis\DataProvider\StringProvider;
 use Ergebnis\DataProvider\Test;
-use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(AbstractProvider::class)]
-#[Framework\Attributes\CoversClass(StringProvider::class)]
+/**
+ * @covers \Ergebnis\DataProvider\AbstractProvider
+ * @covers \Ergebnis\DataProvider\StringProvider
+ */
 final class StringProviderTest extends AbstractProviderTestCase
 {
-    #[Framework\Attributes\DataProviderExternal(StringProvider::class, 'arbitrary')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::arbitrary
+     */
     public function testArbitraryProvidesString(mixed $value): void
     {
         self::assertIsString($value);
@@ -57,7 +59,9 @@ final class StringProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(StringProvider::class, 'blank')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::blank
+     */
     public function testBlankProvidesBlankString(string $value): void
     {
         self::assertSame('', \trim($value));
@@ -78,7 +82,9 @@ final class StringProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(StringProvider::class, 'empty')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::empty
+     */
     public function testEmptyProvidesEmptyString(string $value): void
     {
         self::assertSame('', $value);
@@ -95,7 +101,9 @@ final class StringProviderTest extends AbstractProviderTestCase
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
 
-    #[Framework\Attributes\DataProviderExternal(StringProvider::class, 'untrimmed')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::untrimmed
+     */
     public function testUntrimmedProvidesUntrimmedString(string $value): void
     {
         self::assertNotSame(\trim($value), $value);
@@ -103,7 +111,9 @@ final class StringProviderTest extends AbstractProviderTestCase
         self::assertNotSame('', \trim($value));
     }
 
-    #[Framework\Attributes\DataProviderExternal(StringProvider::class, 'trimmed')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::trimmed
+     */
     public function testTrimmedProvidesString(mixed $value): void
     {
         self::assertIsString($value);

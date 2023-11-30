@@ -80,6 +80,11 @@
       <code>assertIsArray</code>
     </RedundantConditionGivenDocblockType>
   </file>
+  <file src="test/Unit/ResourceProviderTest.php">
+    <MissingClosureParamType>
+      <code>$value</code>
+    </MissingClosureParamType>
+  </file>
   <file src="test/Util/Specification/Closure.php">
     <ImpureFunctionCall>
       <code>$closure($value)</code>

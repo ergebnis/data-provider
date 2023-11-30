@@ -24,8 +24,10 @@ final class ResourceProviderTest extends AbstractProviderTestCase
 {
     /**
      * @dataProvider \Ergebnis\DataProvider\ResourceProvider::resource
+     *
+     * @param mixed $value
      */
-    public function testResourceProvidesResource(mixed $value): void
+    public function testResourceProvidesResource($value): void
     {
         self::assertIsResource($value);
     }
@@ -33,7 +35,7 @@ final class ResourceProviderTest extends AbstractProviderTestCase
     public function testResourceReturnsGeneratorThatProvidesResource(): void
     {
         $specifications = [
-            'resource' => Test\Util\Specification\Closure::create(static function (mixed $value): bool {
+            'resource' => Test\Util\Specification\Closure::create(static function ($value): bool {
                 return \is_resource($value);
             }),
         ];

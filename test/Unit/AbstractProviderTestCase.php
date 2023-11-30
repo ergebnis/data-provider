@@ -26,7 +26,7 @@ abstract class AbstractProviderTestCase extends Framework\TestCase
     {
         self::assertExpectedValuesAreNotEmpty($values);
 
-        $expectedDataSets = \array_map(static function (mixed $value): array {
+        $expectedDataSets = \array_map(static function ($value): array {
             return [
                 $value,
             ];

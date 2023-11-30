@@ -24,8 +24,10 @@ final class NullProviderTest extends AbstractProviderTestCase
 {
     /**
      * @dataProvider \Ergebnis\DataProvider\NullProvider::null
+     *
+     * @param mixed $value
      */
-    public function testNullProvidesNull(mixed $value): void
+    public function testNullProvidesNull($value): void
     {
         self::assertNull($value);
     }

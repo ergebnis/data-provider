@@ -15,8 +15,11 @@ namespace Ergebnis\DataProvider\Test\Util\Specification;
 
 final class Pattern implements Specification
 {
-    private function __construct(private string $pattern)
+    private string $pattern;
+
+    private function __construct(string $pattern)
     {
+        $this->pattern = $pattern;
     }
 
     public static function create(string $pattern): self
@@ -24,7 +27,7 @@ final class Pattern implements Specification
         return new self($pattern);
     }
 
-    public function isSatisfiedBy(mixed $value): bool
+    public function isSatisfiedBy($value): bool
     {
         if (!\is_string($value)) {
             return false;

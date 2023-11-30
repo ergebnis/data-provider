@@ -24,8 +24,10 @@ final class ObjectProviderTest extends AbstractProviderTestCase
 {
     /**
      * @dataProvider \Ergebnis\DataProvider\ObjectProvider::object
+     *
+     * @param mixed $value
      */
-    public function testObjectProvidesObject(mixed $value): void
+    public function testObjectProvidesObject($value): void
     {
         self::assertIsObject($value);
     }

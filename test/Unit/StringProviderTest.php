@@ -24,8 +24,10 @@ final class StringProviderTest extends AbstractProviderTestCase
 {
     /**
      * @dataProvider \Ergebnis\DataProvider\StringProvider::arbitrary
+     *
+     * @param mixed $value
      */
-    public function testArbitraryProvidesString(mixed $value): void
+    public function testArbitraryProvidesString($value): void
     {
         self::assertIsString($value);
     }
@@ -113,8 +115,10 @@ final class StringProviderTest extends AbstractProviderTestCase
 
     /**
      * @dataProvider \Ergebnis\DataProvider\StringProvider::trimmed
+     *
+     * @param mixed $value
      */
-    public function testTrimmedProvidesString(mixed $value): void
+    public function testTrimmedProvidesString($value): void
     {
         self::assertIsString($value);
     }

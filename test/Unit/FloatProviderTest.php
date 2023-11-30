@@ -24,8 +24,10 @@ final class FloatProviderTest extends AbstractProviderTestCase
 {
     /**
      * @dataProvider \Ergebnis\DataProvider\FloatProvider::arbitrary
+     *
+     * @param mixed $value
      */
-    public function testArbitraryProvidesFloat(mixed $value): void
+    public function testArbitraryProvidesFloat($value): void
     {
         self::assertIsFloat($value);
     }

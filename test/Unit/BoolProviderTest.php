@@ -24,8 +24,10 @@ final class BoolProviderTest extends AbstractProviderTestCase
 {
     /**
      * @dataProvider \Ergebnis\DataProvider\BoolProvider::arbitrary
+     *
+     * @param mixed $value
      */
-    public function testArbitraryProvidesBool(mixed $value): void
+    public function testArbitraryProvidesBool($value): void
     {
         self::assertIsBool($value);
     }
@@ -44,8 +46,10 @@ final class BoolProviderTest extends AbstractProviderTestCase
 
     /**
      * @dataProvider \Ergebnis\DataProvider\BoolProvider::false
+     *
+     * @param mixed $value
      */
-    public function testFalseProvidesFalse(mixed $value): void
+    public function testFalseProvidesFalse($value): void
     {
         self::assertFalse($value);
     }
@@ -63,8 +67,10 @@ final class BoolProviderTest extends AbstractProviderTestCase
 
     /**
      * @dataProvider \Ergebnis\DataProvider\BoolProvider::true
+     *
+     * @param mixed $value
      */
-    public function testTrueProvidesTrue(mixed $value): void
+    public function testTrueProvidesTrue($value): void
     {
         self::assertTrue($value);
     }

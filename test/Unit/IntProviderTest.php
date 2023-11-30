@@ -24,8 +24,10 @@ final class IntProviderTest extends AbstractProviderTestCase
 {
     /**
      * @dataProvider \Ergebnis\DataProvider\IntProvider::arbitrary
+     *
+     * @param mixed $value
      */
-    public function testArbitraryProvidesInt(mixed $value): void
+    public function testArbitraryProvidesInt($value): void
     {
         self::assertIsInt($value);
     }

@@ -19,8 +19,8 @@ use PHPUnit\Framework;
 abstract class AbstractProviderTestCase extends Framework\TestCase
 {
     /**
-     * @param array<string, mixed>             $values
-     * @param \Generator<string, array<mixed>> $provider
+     * @param array<string, mixed>                    $values
+     * @param \Generator<string, array<mixed, mixed>> $provider
      */
     final protected static function assertProvidesDataSetsForValues(array $values, \Generator $provider): void
     {
@@ -45,7 +45,7 @@ abstract class AbstractProviderTestCase extends Framework\TestCase
 
     /**
      * @param array<string, Test\Util\Specification\Specification> $specifications
-     * @param \Generator<string, array<mixed>>                     $provider
+     * @param \Generator<string, array<mixed, mixed>>              $provider
      */
     final protected static function assertProvidesDataSetsForValuesSatisfyingSpecifications(array $specifications, \Generator $provider): void
     {

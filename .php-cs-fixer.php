@@ -18,7 +18,7 @@ $license = License\Type\MIT::markdown(
     __DIR__ . '/LICENSE.md',
     License\Range::since(
         License\Year::fromString('2021'),
-        new \DateTimeZone('UTC'),
+        new DateTimeZone('UTC'),
     ),
     License\Holder::fromString('Andreas Möller'),
     License\Url::fromString('https://github.com/ergebnis/data-provider'),
@@ -30,6 +30,7 @@ $ruleSet = PhpCsFixer\Config\RuleSet\Php74::create()
     ->withHeader($license->header())
     ->withRules(PhpCsFixer\Config\Rules::fromArray([
         'mb_str_functions' => false,
+        'phpdoc_to_property_type' => false,
         'strict_comparison' => false,
     ]));
 

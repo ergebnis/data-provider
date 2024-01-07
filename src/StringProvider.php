@@ -136,7 +136,7 @@ final class StringProvider extends AbstractProvider
                 );
             }, \array_keys($whitespaceCharacters)),
             \array_map(static function (string $whitespaceCharacter) use ($faker): string {
-                /** @var array<string> $words */
+                /** @var list<string> $words */
                 $words = $faker->words($faker->numberBetween(2, 5));
 
                 return \implode(

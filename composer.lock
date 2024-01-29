@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9b1e727f927a78fa5c8b43e67f06f65",
+    "content-hash": "644f2bf2cb6fc2f70fa1ff00be17907b",
     "packages": [
         {
             "name": "fakerphp/faker",
-            "version": "v1.23.0",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "e3daa170d00fde61ea7719ef47bb09bb8f1d9b01"
+                "reference": "37f751c67a5372d4e26353bd9384bc03744ec77b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/e3daa170d00fde61ea7719ef47bb09bb8f1d9b01",
-                "reference": "e3daa170d00fde61ea7719ef47bb09bb8f1d9b01",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/37f751c67a5372d4e26353bd9384bc03744ec77b",
+                "reference": "37f751c67a5372d4e26353bd9384bc03744ec77b",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4 || ^8.0",
+                "php": "^7.1 || ^8.0",
                 "psr/container": "^1.0 || ^2.0",
                 "symfony/deprecation-contracts": "^2.2 || ^3.0"
             },
@@ -32,8 +32,7 @@
                 "bamarni/composer-bin-plugin": "^1.4.1",
                 "doctrine/persistence": "^1.3 || ^2.0",
                 "ext-intl": "*",
-                "phpunit/phpunit": "^9.5.26",
-                "symfony/phpunit-bridge": "^5.4.16"
+                "symfony/phpunit-bridge": "^4.4 || ^5.2"
             },
             "suggest": {
                 "doctrine/orm": "Required to use Faker\\ORM\\Doctrine",
@@ -45,7 +44,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "v1.21-dev"
+                    "dev-main": "v1.20-dev"
                 }
             },
             "autoload": {
@@ -70,9 +69,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.23.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.20.0"
             },
-            "time": "2023-06-12T08:44:38+00:00"
+            "time": "2022-07-20T13:12:54+00:00"
         },
         {
             "name": "psr/container",
@@ -1342,73 +1341,6 @@
                 "source": "https://github.com/ergebnis/php-cs-fixer-config"
             },
             "time": "2024-02-06T11:09:35+00:00"
-        },
-        {
-            "name": "ergebnis/phpunit-slow-test-detector",
-            "version": "2.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ergebnis/phpunit-slow-test-detector.git",
-                "reference": "2f671af5c1589b38d5f0c7289681bf49a65b86a3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/phpunit-slow-test-detector/zipball/2f671af5c1589b38d5f0c7289681bf49a65b86a3",
-                "reference": "2f671af5c1589b38d5f0c7289681bf49a65b86a3",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
-                "phpunit/phpunit": "^7.5.0 || ^8.5.19 || ^9.0.0 || ^10.0.0 || ^11.0.0"
-            },
-            "require-dev": {
-                "ergebnis/composer-normalize": "^2.42.0",
-                "ergebnis/data-provider": "^3.2.0",
-                "ergebnis/license": "^2.4.0",
-                "ergebnis/php-cs-fixer-config": "^6.21.0",
-                "fakerphp/faker": "^1.23.1",
-                "psalm/plugin-phpunit": "~0.18.4",
-                "rector/rector": "~0.19.8",
-                "vimeo/psalm": "^5.21.1"
-            },
-            "type": "library",
-            "extra": {
-                "composer-normalize": {
-                    "indent-size": 2,
-                    "indent-style": "space"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ergebnis\\PHPUnit\\SlowTestDetector\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Möller",
-                    "email": "am@localheinz.com",
-                    "homepage": "https://localheinz.com"
-                }
-            ],
-            "description": "Provides facilities for detecting slow tests in phpunit/phpunit.",
-            "homepage": "https://github.com/ergebnis/phpunit-slow-test-detector",
-            "keywords": [
-                "detector",
-                "extension",
-                "phpunit",
-                "slow",
-                "test"
-            ],
-            "support": {
-                "issues": "https://github.com/ergebnis/phpunit-slow-test-detector/issues",
-                "security": "https://github.com/ergebnis/phpunit-slow-test-detector/blob/main/.github/SECURITY.md",
-                "source": "https://github.com/ergebnis/phpunit-slow-test-detector"
-            },
-            "time": "2024-02-05T16:21:43+00:00"
         },
         {
             "name": "erickskrauch/php-cs-fixer-custom-fixers",
@@ -6394,7 +6326,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
+        "php": "~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
     },
     "platform-dev": [],
     "platform-overrides": {

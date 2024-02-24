@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.18.0@b113f3ed0259fd6e212d87c3df80eec95a6abf19">
+<files psalm-version="5.22.2@d768d914152dbbf3486c36398802f74e80cfde48">
   <file src="src/AbstractProvider.php">
     <MixedAssignment>
-      <code>$value</code>
+      <code><![CDATA[$value]]></code>
     </MixedAssignment>
   </file>
   <file src="src/BoolProvider.php">
@@ -14,7 +14,7 @@
   </file>
   <file src="src/FloatProvider.php">
     <InvalidOperand>
-      <code>-1 * \PHP_FLOAT_EPSILON</code>
+      <code><![CDATA[-1 * \PHP_FLOAT_EPSILON]]></code>
     </InvalidOperand>
     <MixedReturnTypeCoercion>
       <code><![CDATA[\Generator<string, array{0: float}>]]></code>
@@ -71,26 +71,26 @@
   </file>
   <file src="test/Unit/AbstractProviderTestCase.php">
     <MixedAssignment>
-      <code>$value</code>
+      <code><![CDATA[$value]]></code>
     </MixedAssignment>
     <PossiblyUnusedMethod>
-      <code>assertProvidesDataSetsForValues</code>
+      <code><![CDATA[assertProvidesDataSetsForValues]]></code>
     </PossiblyUnusedMethod>
     <RedundantConditionGivenDocblockType>
-      <code>assertIsArray</code>
+      <code><![CDATA[assertIsArray]]></code>
     </RedundantConditionGivenDocblockType>
   </file>
   <file src="test/Unit/ResourceProviderTest.php">
     <MissingClosureParamType>
-      <code>$value</code>
+      <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
   </file>
   <file src="test/Util/Specification/Closure.php">
     <ImpureFunctionCall>
-      <code>$closure($value)</code>
+      <code><![CDATA[$closure($value)]]></code>
     </ImpureFunctionCall>
     <MissingClosureParamType>
-      <code>$value</code>
+      <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
   </file>
   <file src="test/Util/Specification/Pattern.php">

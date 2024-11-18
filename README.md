@@ -6,7 +6,6 @@
 [![Renew](https://github.com/ergebnis/data-provider/workflows/Renew/badge.svg)](https://github.com/ergebnis/data-provider/actions)
 
 [![Code Coverage](https://codecov.io/gh/ergebnis/data-provider/branch/main/graph/badge.svg)](https://codecov.io/gh/ergebnis/data-provider)
-[![Type Coverage](https://shepherd.dev/github/ergebnis/data-provider/coverage.svg)](https://shepherd.dev/github/ergebnis/data-provider)
 
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/data-provider/v/stable)](https://packagist.org/packages/ergebnis/data-provider)
 [![Total Downloads](https://poser.pugx.org/ergebnis/data-provider/downloads)](https://packagist.org/packages/ergebnis/data-provider)

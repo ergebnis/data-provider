@@ -1,0 +1,72 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Generator expects value type array\\{bool\\}, array\\{mixed\\} given\\.$#"
+			count: 3
+			path: src/BoolProvider.php
+
+		-
+			message: "#^Generator expects value type array\\{float\\}, array\\{mixed\\} given\\.$#"
+			count: 7
+			path: src/FloatProvider.php
+
+		-
+			message: "#^Generator expects value type array\\{int\\}, array\\{mixed\\} given\\.$#"
+			count: 7
+			path: src/IntProvider.php
+
+		-
+			message: "#^Generator expects value type array\\{null\\}, array\\{mixed\\} given\\.$#"
+			count: 1
+			path: src/NullProvider.php
+
+		-
+			message: "#^Generator expects value type array\\{bool\\}, array\\{mixed\\} given\\.$#"
+			count: 1
+			path: src/ObjectProvider.php
+
+		-
+			message: "#^Generator expects value type array\\{resource\\}, array\\{mixed\\} given\\.$#"
+			count: 1
+			path: src/ResourceProvider.php
+
+		-
+			message: "#^Generator expects value type array\\{string\\}, array\\{mixed\\} given\\.$#"
+			count: 6
+			path: src/StringProvider.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$args of function array_merge expects array, array\\<string, string\\>\\|false given\\.$#"
+			count: 1
+			path: src/StringProvider.php
+
+		-
+			message: "#^Parameter \\#4 \\.\\.\\.\\$args of function array_merge expects array, array\\<string, string\\>\\|false given\\.$#"
+			count: 1
+			path: src/StringProvider.php
+
+		-
+			message: "#^Parameter \\#5 \\.\\.\\.\\$args of function array_merge expects array, array\\<string, string\\>\\|false given\\.$#"
+			count: 1
+			path: src/StringProvider.php
+
+		-
+			message: "#^Generator expects value type array\\{string\\}, array\\{mixed\\} given\\.$#"
+			count: 3
+			path: src/UuidProvider.php
+
+		-
+			message: "#^Call to static method PHPUnit\\\\Framework\\\\Assert\\:\\:assertIsArray\\(\\) with array\\<int\\|string, mixed\\> and non\\-falsy\\-string will always evaluate to true\\.$#"
+			count: 1
+			path: test/Unit/AbstractProviderTestCase.php
+
+		-
+			message: "#^Method Ergebnis\\\\DataProvider\\\\Test\\\\Unit\\\\AbstractProviderTestCase\\:\\:assertDataSetsAreNotEmpty\\(\\) has parameter \\$actual with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: test/Unit/AbstractProviderTestCase.php
+
+		-
+			message: "#^Method Ergebnis\\\\DataProvider\\\\Test\\\\Unit\\\\AbstractProviderTestCase\\:\\:assertExpectedValuesAreNotEmpty\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: test/Unit/AbstractProviderTestCase.php
+

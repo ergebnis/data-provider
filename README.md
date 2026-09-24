@@ -9,7 +9,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/data-provider/v/stable)](https://packagist.org/packages/ergebnis/data-provider)
 [![Total Downloads](https://poser.pugx.org/ergebnis/data-provider/downloads)](https://packagist.org/packages/ergebnis/data-provider)
-[![Monthly Downloads](http://poser.pugx.org/ergebnis/data-provider/d/monthly)](https://packagist.org/packages/ergebnis/data-provider)
+[![Monthly Downloads](https://poser.pugx.org/ergebnis/data-provider/d/monthly)](https://packagist.org/packages/ergebnis/data-provider)
 
 This project provides a [`composer`](https://getcomposer.org) package with generic data providers for use with [`phpunit/phpunit`](https://github.com/sebastianbergmann/phpunit).
 

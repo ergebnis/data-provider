@@ -143,6 +143,7 @@ For a full diff see [`a5f2657...1.0.0`][a5f2657...1.0.0].
 
 [#1]: https://github.com/ergebnis/data-provider/pull/1
 [#21]: https://github.com/ergebnis/data-provider/pull/21
+[#23]: https://github.com/ergebnis/data-provider/pull/23
 [#40]: https://github.com/ergebnis/data-provider/pull/40
 [#119]: https://github.com/ergebnis/data-provider/pull/119
 [#226]: https://github.com/ergebnis/data-provider/pull/226

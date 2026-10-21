@@ -25,7 +25,7 @@ parameters:
 			path: src/NullProvider.php
 
 		-
-			message: '#^Generator expects value type array\{bool\}, array\{mixed\} given\.$#'
+			message: '#^Generator expects value type array\{stdClass\}, array\{mixed\} given\.$#'
 			identifier: generator.valueType
 			count: 1
 			path: src/ObjectProvider.php

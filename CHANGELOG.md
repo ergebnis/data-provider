@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`3.7.0...main`][3.7.0...main].
 
+### Fixed
+
+- Fixed return type of `ObjectProvider::object()` ([#658]), by [@localheinz]
+
 ## [`3.7.0`][3.7.0]
 
 For a full diff see [`3.6.0...3.7.0`][3.6.0...3.7.0].
@@ -167,5 +171,6 @@ For a full diff see [`a5f2657...1.0.0`][a5f2657...1.0.0].
 [#510]: https://github.com/ergebnis/data-provider/pull/510
 [#516]: https://github.com/ergebnis/data-provider/pull/516
 [#619]: https://github.com/ergebnis/data-provider/pull/619
+[#658]: https://github.com/ergebnis/data-provider/pull/658
 
 [@localheinz]: https://github.com/localheinz

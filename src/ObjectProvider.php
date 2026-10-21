@@ -16,7 +16,7 @@ namespace Ergebnis\DataProvider;
 final class ObjectProvider extends AbstractProvider
 {
     /**
-     * @return \Generator<string, array{0: bool}>
+     * @return \Generator<string, array{0: \stdClass}>
      */
     public static function object(): \Generator
     {

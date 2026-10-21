@@ -37,11 +37,13 @@ abstract class AbstractProvider
     }
 
     /**
-     * @param array<string, mixed> $values
+     * @template T
+     *
+     * @param array<string, T> $values
      *
      * @throws Exception\EmptyValues
      *
-     * @return \Generator<string, array{0: mixed}>
+     * @return \Generator<string, array{0: T}>
      */
     final protected static function provideDataForValues(array $values): \Generator
     {
@@ -57,11 +59,14 @@ abstract class AbstractProvider
     }
 
     /**
-     * @param array<string, mixed> $values
+     * @template T
+     *
+     * @param array<string, T>  $values
+     * @param \Closure(T): bool $test
      *
      * @throws Exception\EmptyValues
      *
-     * @return \Generator<string, array{0: mixed}>
+     * @return \Generator<string, array{0: T}>
      */
     final protected static function provideDataForValuesWhere(array $values, \Closure $test): \Generator
     {

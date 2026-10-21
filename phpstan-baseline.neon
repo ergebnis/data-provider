@@ -1,46 +1,10 @@
 parameters:
 	ignoreErrors:
 		-
-			message: '#^Generator expects value type array\{bool\}, array\{mixed\} given\.$#'
-			identifier: generator.valueType
-			count: 3
-			path: src/BoolProvider.php
-
-		-
-			message: '#^Generator expects value type array\{float\}, array\{mixed\} given\.$#'
-			identifier: generator.valueType
-			count: 7
-			path: src/FloatProvider.php
-
-		-
-			message: '#^Generator expects value type array\{int\}, array\{mixed\} given\.$#'
-			identifier: generator.valueType
-			count: 7
-			path: src/IntProvider.php
-
-		-
-			message: '#^Generator expects value type array\{null\}, array\{mixed\} given\.$#'
-			identifier: generator.valueType
-			count: 1
-			path: src/NullProvider.php
-
-		-
-			message: '#^Generator expects value type array\{stdClass\}, array\{mixed\} given\.$#'
-			identifier: generator.valueType
-			count: 1
-			path: src/ObjectProvider.php
-
-		-
-			message: '#^Generator expects value type array\{resource\}, array\{mixed\} given\.$#'
+			message: '#^Generator expects value type array\{resource\}, array\{resource\|false\} given\.$#'
 			identifier: generator.valueType
 			count: 1
 			path: src/ResourceProvider.php
-
-		-
-			message: '#^Generator expects value type array\{string\}, array\{mixed\} given\.$#'
-			identifier: generator.valueType
-			count: 6
-			path: src/StringProvider.php
 
 		-
 			message: '#^Method Ergebnis\\DataProvider\\StringProvider\:\:values\(\) should return array\<string, string\> but returns array\<mixed, mixed\>\.$#'
@@ -65,12 +29,6 @@ parameters:
 			identifier: argument.type
 			count: 1
 			path: src/StringProvider.php
-
-		-
-			message: '#^Generator expects value type array\{string\}, array\{mixed\} given\.$#'
-			identifier: generator.valueType
-			count: 3
-			path: src/UuidProvider.php
 
 		-
 			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertIsArray\(\) with array\<mixed\> and non\-falsy\-string will always evaluate to true\.$#'

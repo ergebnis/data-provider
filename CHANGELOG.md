@@ -11,6 +11,7 @@ For a full diff see [`3.7.0...main`][3.7.0...main].
 ### Fixed
 
 - Fixed return type of `ObjectProvider::object()` ([#658]), by [@localheinz]
+- Adjusted `AbstractProvider::provideDataForValues()` and `AbstractProvider::provideDataForValuesWhere()` to use templates ([#659]), by [@localheinz]
 
 ## [`3.7.0`][3.7.0]
 
@@ -172,5 +173,6 @@ For a full diff see [`a5f2657...1.0.0`][a5f2657...1.0.0].
 [#516]: https://github.com/ergebnis/data-provider/pull/516
 [#619]: https://github.com/ergebnis/data-provider/pull/619
 [#658]: https://github.com/ergebnis/data-provider/pull/658
+[#659]: https://github.com/ergebnis/data-provider/pull/659
 
 [@localheinz]: https://github.com/localheinz

@@ -7,30 +7,6 @@ parameters:
 			path: src/ResourceProvider.php
 
 		-
-			message: '#^Method Ergebnis\\DataProvider\\StringProvider\:\:values\(\) should return array\<string, string\> but returns array\<mixed, mixed\>\.$#'
-			identifier: return.type
-			count: 1
-			path: src/StringProvider.php
-
-		-
-			message: '#^Parameter \#2 \.\.\.\$args of function array_merge expects array, array\<string, string\>\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/StringProvider.php
-
-		-
-			message: '#^Parameter \#4 \.\.\.\$args of function array_merge expects array, array\<string, string\>\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/StringProvider.php
-
-		-
-			message: '#^Parameter \#5 \.\.\.\$args of function array_merge expects array, array\<string, string\>\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/StringProvider.php
-
-		-
 			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertIsArray\(\) with array\<mixed\> and non\-falsy\-string will always evaluate to true\.$#'
 			identifier: staticMethod.alreadyNarrowedType
 			count: 1

@@ -156,7 +156,12 @@ final class StringProvider extends AbstractProvider
     }
 
     /**
-     * @return array<string, string>
+     * @return array{
+     *     'carriage-return': string,
+     *     'line-feed': string,
+     *     space: string,
+     *     tab: string,
+     * }
      */
     private static function whitespaceCharacters(): array
     {

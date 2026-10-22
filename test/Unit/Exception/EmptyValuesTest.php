@@ -21,14 +21,14 @@ use PHPUnit\Framework;
  */
 final class EmptyValuesTest extends Framework\TestCase
 {
-    public function testCreateReturnsException(): void
+    public function testCreateReturnsEmptyValues(): void
     {
         $exception = Exception\EmptyValues::create();
 
         self::assertSame('Values can not be empty.', $exception->getMessage());
     }
 
-    public function testFilteredReturnsException(): void
+    public function testFilteredReturnsEmptyValues(): void
     {
         $exception = Exception\EmptyValues::filtered();
 

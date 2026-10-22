@@ -16,12 +16,23 @@ namespace Ergebnis\DataProvider;
 final class ResourceProvider extends AbstractProvider
 {
     /**
+     * @throws Exception\ResourceCanNotBeOpened
+     *
      * @return \Generator<string, array{0: resource}>
      */
     public static function resource(): \Generator
     {
+        $resource = \fopen(
+            __FILE__,
+            'rb',
+        );
+
+        if (!\is_resource($resource)) {
+            throw Exception\ResourceCanNotBeOpened::at(__FILE__);
+        }
+
         yield from self::provideDataForValues([
-            'resource' => \fopen(__FILE__, 'rb'),
+            'resource' => $resource,
         ]);
     }
 }

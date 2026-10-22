@@ -1,12 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: '#^Generator expects value type array\{resource\}, array\{resource\|false\} given\.$#'
-			identifier: generator.valueType
-			count: 1
-			path: src/ResourceProvider.php
-
-		-
 			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertIsArray\(\) with array\<mixed\> and non\-falsy\-string will always evaluate to true\.$#'
 			identifier: staticMethod.alreadyNarrowedType
 			count: 1

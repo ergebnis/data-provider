@@ -21,7 +21,7 @@ use PHPUnit\Framework;
  */
 final class ResourceCanNotBeOpenedTest extends Framework\TestCase
 {
-    public function testAtReturnsException(): void
+    public function testAtReturnsResourceCanNotBeOpened(): void
     {
         $path = __FILE__;
 

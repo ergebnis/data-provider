@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`3.7.1...main`][3.7.1...main].
 
+### Added
+
+- Added support for PHP 8.6 ([#681]), by [@localheinz]
+
 ## [`3.7.1`][3.7.1]
 
 For a full diff see [`3.7.0...3.7.1`][3.7.0...3.7.1].
@@ -182,5 +186,6 @@ For a full diff see [`a5f2657...1.0.0`][a5f2657...1.0.0].
 [#658]: https://github.com/ergebnis/data-provider/pull/658
 [#659]: https://github.com/ergebnis/data-provider/pull/659
 [#663]: https://github.com/ergebnis/data-provider/pull/663
+[#681]: https://github.com/ergebnis/data-provider/pull/681
 
 [@localheinz]: https://github.com/localheinz

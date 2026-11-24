@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`3.8.0...main`][3.8.0...main].
+For a full diff see [`3.9.0...main`][3.9.0...main].
+
+## [`3.9.0`][3.9.0]
+
+For a full diff see [`3.8.0...3.9.0`][3.8.0...3.9.0].
 
 ### Changed
 
@@ -175,7 +179,9 @@ For a full diff see [`a5f2657...1.0.0`][a5f2657...1.0.0].
 [3.7.1]: https://github.com/ergebnis/data-provider/releases/tag/3.7.1
 [3.7.1...3.8.0]: https://github.com/ergebnis/data-provider/compare/3.7.1...3.8.0
 [3.8.0]: https://github.com/ergebnis/data-provider/releases/tag/3.8.0
-[3.8.0...main]: https://github.com/ergebnis/data-provider/compare/3.8.0...main
+[3.8.0...3.9.0]: https://github.com/ergebnis/data-provider/compare/3.8.0...3.9.0
+[3.9.0]: https://github.com/ergebnis/data-provider/releases/tag/3.9.0
+[3.9.0...main]: https://github.com/ergebnis/data-provider/compare/3.9.0...main
 
 [#1]: https://github.com/ergebnis/data-provider/pull/1
 [#21]: https://github.com/ergebnis/data-provider/pull/21

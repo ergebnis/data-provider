@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
-use Ergebnis\DataProvider\Test;
+use Ergebnis\DataProvider;
 use PHPUnit\Framework;
 
 abstract class AbstractProviderTestCase extends Framework\TestCase
@@ -44,8 +44,8 @@ abstract class AbstractProviderTestCase extends Framework\TestCase
     }
 
     /**
-     * @param array<string, Test\Util\Specification\Specification> $specifications
-     * @param \Generator<string, array<mixed, mixed>>              $provider
+     * @param array<string, DataProvider\Test\Util\Specification\Specification> $specifications
+     * @param \Generator<string, array<mixed, mixed>>                           $provider
      */
     final protected static function assertProvidesDataSetsForValuesSatisfyingSpecifications(array $specifications, \Generator $provider): void
     {
@@ -57,12 +57,12 @@ abstract class AbstractProviderTestCase extends Framework\TestCase
         );
 
         self::assertContainsOnly(
-            Test\Util\Specification\Specification::class,
+            DataProvider\Test\Util\Specification\Specification::class,
             $specifications,
             false,
             \sprintf(
                 'Failed asserting that the values of specifications implement "%s".',
-                Test\Util\Specification\Specification::class,
+                DataProvider\Test\Util\Specification\Specification::class,
             ),
         );
 

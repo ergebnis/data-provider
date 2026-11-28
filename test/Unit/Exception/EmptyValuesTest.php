@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit\Exception;
 
-use Ergebnis\DataProvider\Exception;
+use Ergebnis\DataProvider;
 use PHPUnit\Framework;
 
 /**
@@ -23,14 +23,14 @@ final class EmptyValuesTest extends Framework\TestCase
 {
     public function testCreateReturnsEmptyValues(): void
     {
-        $exception = Exception\EmptyValues::create();
+        $exception = DataProvider\Exception\EmptyValues::create();
 
         self::assertSame('Values can not be empty.', $exception->getMessage());
     }
 
     public function testFilteredReturnsEmptyValues(): void
     {
-        $exception = Exception\EmptyValues::filtered();
+        $exception = DataProvider\Exception\EmptyValues::filtered();
 
         self::assertSame('Filtered values can not be empty.', $exception->getMessage());
     }

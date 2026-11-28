@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
-use Ergebnis\DataProvider\FloatProvider;
-use Ergebnis\DataProvider\Test;
+use Ergebnis\DataProvider;
 
 /**
  * @covers \Ergebnis\DataProvider\AbstractProvider
@@ -35,18 +34,18 @@ final class FloatProviderTest extends AbstractProviderTestCase
     public function testArbitraryReturnsGeneratorThatProvidesFloatValues(): void
     {
         $specifications = [
-            'float-less-than-minus-one' => Test\Util\Specification\Closure::create(static function (float $value): bool {
+            'float-less-than-minus-one' => DataProvider\Test\Util\Specification\Closure::create(static function (float $value): bool {
                 return -1.0 > $value;
             }),
-            'float-minus-one' => Test\Util\Specification\Identical::create(-1.0),
-            'float-zero' => Test\Util\Specification\Identical::create(0.0),
-            'float-plus-one' => Test\Util\Specification\Identical::create(1.0),
-            'float-greater-than-plus-one' => Test\Util\Specification\Closure::create(static function (float $value): bool {
+            'float-minus-one' => DataProvider\Test\Util\Specification\Identical::create(-1.0),
+            'float-zero' => DataProvider\Test\Util\Specification\Identical::create(0.0),
+            'float-plus-one' => DataProvider\Test\Util\Specification\Identical::create(1.0),
+            'float-greater-than-plus-one' => DataProvider\Test\Util\Specification\Closure::create(static function (float $value): bool {
                 return 1.0 < $value;
             }),
         ];
 
-        $provider = FloatProvider::arbitrary();
+        $provider = DataProvider\FloatProvider::arbitrary();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
@@ -62,13 +61,13 @@ final class FloatProviderTest extends AbstractProviderTestCase
     public function testLessThanZeroReturnsGeneratorThatProvidesFloatLessThanZero(): void
     {
         $specifications = [
-            'float-less-than-minus-one' => Test\Util\Specification\Closure::create(static function (float $value): bool {
+            'float-less-than-minus-one' => DataProvider\Test\Util\Specification\Closure::create(static function (float $value): bool {
                 return -1.0 > $value;
             }),
-            'float-minus-one' => Test\Util\Specification\Identical::create(-1.0),
+            'float-minus-one' => DataProvider\Test\Util\Specification\Identical::create(-1.0),
         ];
 
-        $provider = FloatProvider::lessThanZero();
+        $provider = DataProvider\FloatProvider::lessThanZero();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
@@ -84,10 +83,10 @@ final class FloatProviderTest extends AbstractProviderTestCase
     public function testZeroReturnsGeneratorThatProvidesZero(): void
     {
         $specifications = [
-            'float-zero' => Test\Util\Specification\Identical::create(0.0),
+            'float-zero' => DataProvider\Test\Util\Specification\Identical::create(0.0),
         ];
 
-        $provider = FloatProvider::zero();
+        $provider = DataProvider\FloatProvider::zero();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
@@ -103,13 +102,13 @@ final class FloatProviderTest extends AbstractProviderTestCase
     public function testGreaterThanZeroReturnsGeneratorThatProvidesFloatGreaterThanZero(): void
     {
         $specifications = [
-            'float-plus-one' => Test\Util\Specification\Identical::create(1.0),
-            'float-greater-than-plus-one' => Test\Util\Specification\Closure::create(static function (float $value): bool {
+            'float-plus-one' => DataProvider\Test\Util\Specification\Identical::create(1.0),
+            'float-greater-than-plus-one' => DataProvider\Test\Util\Specification\Closure::create(static function (float $value): bool {
                 return 1.0 < $value;
             }),
         ];
 
-        $provider = FloatProvider::greaterThanZero();
+        $provider = DataProvider\FloatProvider::greaterThanZero();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
@@ -125,14 +124,14 @@ final class FloatProviderTest extends AbstractProviderTestCase
     public function testLessThanOneReturnsGeneratorThatProvidesFloatLessThanOne(): void
     {
         $specifications = [
-            'float-less-than-minus-one' => Test\Util\Specification\Closure::create(static function (float $value): bool {
+            'float-less-than-minus-one' => DataProvider\Test\Util\Specification\Closure::create(static function (float $value): bool {
                 return -1.0 > $value;
             }),
-            'float-minus-one' => Test\Util\Specification\Identical::create(-1.0),
-            'float-zero' => Test\Util\Specification\Identical::create(0.0),
+            'float-minus-one' => DataProvider\Test\Util\Specification\Identical::create(-1.0),
+            'float-zero' => DataProvider\Test\Util\Specification\Identical::create(0.0),
         ];
 
-        $provider = FloatProvider::lessThanOne();
+        $provider = DataProvider\FloatProvider::lessThanOne();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
@@ -140,10 +139,10 @@ final class FloatProviderTest extends AbstractProviderTestCase
     public function testOneReturnsGeneratorThatProvidesOne(): void
     {
         $specifications = [
-            'float-plus-one' => Test\Util\Specification\Identical::create(1.0),
+            'float-plus-one' => DataProvider\Test\Util\Specification\Identical::create(1.0),
         ];
 
-        $provider = FloatProvider::one();
+        $provider = DataProvider\FloatProvider::one();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
@@ -159,12 +158,12 @@ final class FloatProviderTest extends AbstractProviderTestCase
     public function testGreaterThanOneReturnsGeneratorThatProvidesFloatGreaterThanOne(): void
     {
         $specifications = [
-            'float-greater-than-plus-one' => Test\Util\Specification\Closure::create(static function (float $value): bool {
+            'float-greater-than-plus-one' => DataProvider\Test\Util\Specification\Closure::create(static function (float $value): bool {
                 return 1.0 < $value;
             }),
         ];
 
-        $provider = FloatProvider::greaterThanOne();
+        $provider = DataProvider\FloatProvider::greaterThanOne();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }

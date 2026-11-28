@@ -11,14 +11,13 @@ declare(strict_types=1);
  * @see https://github.com/ergebnis/data-provider
  */
 
-use Ergebnis\DataProvider\Test;
-use Ergebnis\DataProvider\UuidProvider;
+use Ergebnis\DataProvider;
 
 /**
  * @covers \Ergebnis\DataProvider\AbstractProvider
  * @covers \Ergebnis\DataProvider\UuidProvider
  */
-final class UuidProviderTest extends Test\Unit\AbstractProviderTestCase
+final class UuidProviderTest extends DataProvider\Test\Unit\AbstractProviderTestCase
 {
     /**
      * @dataProvider \Ergebnis\DataProvider\UuidProvider::arbitrary
@@ -31,11 +30,11 @@ final class UuidProviderTest extends Test\Unit\AbstractProviderTestCase
     public function testArbitraryReturnsGeneratorThatProvidesUuidStrings(): void
     {
         $specifications = [
-            'uuid-case-lower' => Test\Util\Specification\Pattern::create('/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/'),
-            'uuid-case-upper' => Test\Util\Specification\Pattern::create('/^[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}$/'),
+            'uuid-case-lower' => DataProvider\Test\Util\Specification\Pattern::create('/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/'),
+            'uuid-case-upper' => DataProvider\Test\Util\Specification\Pattern::create('/^[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}$/'),
         ];
 
-        $provider = UuidProvider::arbitrary();
+        $provider = DataProvider\UuidProvider::arbitrary();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
@@ -43,10 +42,10 @@ final class UuidProviderTest extends Test\Unit\AbstractProviderTestCase
     public function testCaseLowerReturnsGeneratorThatProvidesLowerCaseUuid(): void
     {
         $specifications = [
-            'uuid-case-lower' => Test\Util\Specification\Pattern::create('/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/'),
+            'uuid-case-lower' => DataProvider\Test\Util\Specification\Pattern::create('/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/'),
         ];
 
-        $provider = UuidProvider::caseLower();
+        $provider = DataProvider\UuidProvider::caseLower();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
@@ -54,10 +53,10 @@ final class UuidProviderTest extends Test\Unit\AbstractProviderTestCase
     public function testCaseUpperReturnsGeneratorThatProvidesUpperCaseUuid(): void
     {
         $specifications = [
-            'uuid-case-upper' => Test\Util\Specification\Pattern::create('/^[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}$/'),
+            'uuid-case-upper' => DataProvider\Test\Util\Specification\Pattern::create('/^[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}$/'),
         ];
 
-        $provider = UuidProvider::caseUpper();
+        $provider = DataProvider\UuidProvider::caseUpper();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }

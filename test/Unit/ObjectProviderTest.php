@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
-use Ergebnis\DataProvider\ObjectProvider;
-use Ergebnis\DataProvider\Test;
+use Ergebnis\DataProvider;
 
 /**
  * @covers \Ergebnis\DataProvider\AbstractProvider
@@ -35,10 +34,10 @@ final class ObjectProviderTest extends AbstractProviderTestCase
     public function testObjectReturnsGeneratorThatProvidesObject(): void
     {
         $specifications = [
-            'object' => Test\Util\Specification\Equal::create(new \stdClass()),
+            'object' => DataProvider\Test\Util\Specification\Equal::create(new \stdClass()),
         ];
 
-        $provider = ObjectProvider::object();
+        $provider = DataProvider\ObjectProvider::object();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }

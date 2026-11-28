@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
-use Ergebnis\DataProvider\BoolProvider;
-use Ergebnis\DataProvider\Test;
+use Ergebnis\DataProvider;
 
 /**
  * @covers \Ergebnis\DataProvider\AbstractProvider
@@ -35,11 +34,11 @@ final class BoolProviderTest extends AbstractProviderTestCase
     public function testArbitraryReturnsGeneratorThatProvidesBoolValues(): void
     {
         $specifications = [
-            'bool-false' => Test\Util\Specification\Identical::create(false),
-            'bool-true' => Test\Util\Specification\Identical::create(true),
+            'bool-false' => DataProvider\Test\Util\Specification\Identical::create(false),
+            'bool-true' => DataProvider\Test\Util\Specification\Identical::create(true),
         ];
 
-        $provider = BoolProvider::arbitrary();
+        $provider = DataProvider\BoolProvider::arbitrary();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
@@ -57,10 +56,10 @@ final class BoolProviderTest extends AbstractProviderTestCase
     public function testFalseReturnsGeneratorThatProvidesFalse(): void
     {
         $specifications = [
-            'bool-false' => Test\Util\Specification\Identical::create(false),
+            'bool-false' => DataProvider\Test\Util\Specification\Identical::create(false),
         ];
 
-        $provider = BoolProvider::false();
+        $provider = DataProvider\BoolProvider::false();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }
@@ -78,10 +77,10 @@ final class BoolProviderTest extends AbstractProviderTestCase
     public function testTrueReturnsGeneratorThatProvidesTrue(): void
     {
         $specifications = [
-            'bool-true' => Test\Util\Specification\Identical::create(true),
+            'bool-true' => DataProvider\Test\Util\Specification\Identical::create(true),
         ];
 
-        $provider = BoolProvider::true();
+        $provider = DataProvider\BoolProvider::true();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }

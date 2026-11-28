@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit;
 
-use Ergebnis\DataProvider\ResourceProvider;
-use Ergebnis\DataProvider\Test;
+use Ergebnis\DataProvider;
 
 /**
  * @covers \Ergebnis\DataProvider\AbstractProvider
@@ -35,12 +34,12 @@ final class ResourceProviderTest extends AbstractProviderTestCase
     public function testResourceReturnsGeneratorThatProvidesResource(): void
     {
         $specifications = [
-            'resource' => Test\Util\Specification\Closure::create(static function ($value): bool {
+            'resource' => DataProvider\Test\Util\Specification\Closure::create(static function ($value): bool {
                 return \is_resource($value);
             }),
         ];
 
-        $provider = ResourceProvider::resource();
+        $provider = DataProvider\ResourceProvider::resource();
 
         self::assertProvidesDataSetsForValuesSatisfyingSpecifications($specifications, $provider);
     }

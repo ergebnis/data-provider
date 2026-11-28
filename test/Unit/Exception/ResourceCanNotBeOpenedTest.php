@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataProvider\Test\Unit\Exception;
 
-use Ergebnis\DataProvider\Exception;
+use Ergebnis\DataProvider;
 use PHPUnit\Framework;
 
 /**
@@ -25,7 +25,7 @@ final class ResourceCanNotBeOpenedTest extends Framework\TestCase
     {
         $path = __FILE__;
 
-        $exception = Exception\ResourceCanNotBeOpened::at($path);
+        $exception = DataProvider\Exception\ResourceCanNotBeOpened::at($path);
 
         $message = \sprintf(
             'Resource at "%s" can not be opened.',

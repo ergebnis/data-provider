@@ -45,7 +45,7 @@ abstract class AbstractProviderTestCase extends Framework\TestCase
 
     /**
      * @param array<string, DataProvider\Test\Util\Specification\Specification> $specifications
-     * @param \Generator<string, array<mixed, mixed>>              $provider
+     * @param \Generator<string, array<mixed, mixed>>                           $provider
      */
     final protected static function assertProvidesDataSetsForValuesSatisfyingSpecifications(array $specifications, \Generator $provider): void
     {
